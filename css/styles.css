@@ -1,0 +1,307 @@
+html,body{
+	margin: 0;/*retirar a margem*/
+	padding: 0;
+	
+}
+body{
+	background-color: #2b2b2b;
+	font-family: 'Montserrat', sans-serif;
+}
+.navigation{
+	background-color: #2b2b2b;
+	color: white;
+	height: 50px;/*espaço da barra de cima*/
+}
+.navigation ul{
+	margin-top: 0;/*retirar margem do topo*/
+	list-style: none;/*retirar marcadores*/
+	padding-left: 0;/*retirar espaço da lista*/
+	text-align: right;/*alinhar texto a direita*/
+	height: 50px;
+}
+.navigation li{
+	display: inline-block;/* deixar lista na mesma linha */
+	padding-left: 30px;/*espaço da lista dps da borda */
+	padding-right: 30px;/*espaço entre elementos*/
+	line-height: 50px;/*alinha o texto dentro da barra*/
+	font-size: 16px;
+	font-weight: 100;
+}
+
+.navigation a{
+	color: white;	
+	text-decoration: none;
+}
+.navigation a:hover{
+	color: #f27609;
+}
+.navigation li.threeline-icon{
+	display: none;
+}
+.navigation li.threeline-icon{
+	cursor: pointer;
+	color: #f27609;
+}
+.capa{
+	color: white;
+}
+.capa div{
+	display: inline-block;/*liberar os div*/
+	height: 650px;/*altura*/
+}
+.profile-pic img{
+	width: 400px;
+	border-radius:400px ;/*arrendodar cantos da img*/
+	margin-top: 100px;
+}
+.profile-pic{
+	width: 40%;
+	text-align: center;/*alinhar img*/
+	
+	animation-name: profile-capa ;
+	animation-duration: 2s;
+}
+
+.profile-title{
+	vertical-align: top;
+	width: 59%;
+
+	animation-name: titulo-capa ;
+	animation-duration: 2s;
+}
+
+
+.profile-title span{
+	color: #f27609;
+	display: block;
+	font-size: 70px;
+}
+.profile-title h1{
+	text-transform: uppercase;/*letra maiscula*/
+	font-size: 60px;
+	margin-top: 200px;
+	line-height: 70px;
+
+}
+.profile-title h2{
+	font-size: 20px;
+	font-weight: 100;
+	margin-top: -25px;
+}
+
+
+
+.main{
+	/*Margens do site,encima,direita,embaixo,esquerda*/
+	padding: 20px 180px 80px 100px;
+
+	animation-name: conteudo ;
+	animation-duration: 2s;
+	
+}
+.cv-pic{
+	float: left;
+	width: 220px;
+	margin-right: 30px;
+	margin-bottom: 20px;
+}
+.main h1{
+	color: white;
+	font-weight: normal;
+}
+.main h2{
+	color: white;
+	font-size: 16px;
+	text-transform: uppercase;
+	font-weight: normal;
+	margin-top: 40px;
+}
+.main h3{
+	color: #f27609;
+	font-size: 12px;
+	text-transform: uppercase;
+}
+.main p{
+	color: white;
+	font-size: 18px;
+	font-weight: 100;
+	line-height: 28px;
+	text-align: justify;/*justificar texto*/
+	
+}
+.main span{
+	color: white;
+}
+.main a{
+	color: #f27609;	
+	text-decoration: none;
+	
+}
+.caminho{
+	list-style: none;
+	padding-left: 0;
+	color: gray;
+}
+.caminho a{
+	color: grey;
+}
+.caminho li{
+	display: inline-block;
+}
+.social-img{
+	width: 50px;
+	margin-right: 10px;
+}
+.miniatura{
+	width: 320px;
+	height: 320px;
+	display: inline-block;
+	margin-right: 15px;
+	margin-bottom: 15px;
+	background-size: contain;
+	overflow: hidden;
+	background-repeat: no-repeat;
+}
+.miniatura a{
+	text-decoration: none;
+}
+
+.blackbox{
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	opacity: 0;/*transpar*/
+	padding-top: 100px;
+	transition: 1s;
+}
+.blackbox:hover {
+	opacity:0.8 ;/*transparencia*/
+	transition:1s ;
+}
+.blackbox-text{
+	text-align: center;
+	
+}
+.blackbox h1{
+	font-size: 16px;
+	color: #f27609;
+	text-transform: uppercase;
+	margin: 0 3px 0 3px 0;
+}
+.blackbox h2{
+	text-transform: none;
+	font-weight: 100;
+	margin-top: 0;
+}
+.foto-trabalhos{
+	width: 100%;
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+.back-link{
+	color: #f27609;
+}
+
+@keyframes profile-capa{
+	0%{opacity: 0;transform:  translate(0px,20px)}
+	100%{opacity: 1;transform: translate(0px,0px);}
+}
+
+@keyframes titulo-capa{
+	0%{opacity: 0;transform:  translate(0px,-20px)}
+	100%{opacity: 1;transform: translate(0px,0px);}
+}
+@keyframes conteudo{
+	0%{opacity: 0;transform:  translate(-20px,0px)}
+	100%{opacity: 1;transform: translate(0px,0px);}
+}
+
+@media(max-width: 1000px){
+	.navigation li{
+		display: none;
+	}
+	.navigation li.threeline-icon{
+		display: inline-block;
+	}
+	.capa div{
+		display: block;
+		height: auto;
+	}
+	.profile-pic{
+		width: 100%;
+	}
+	.profile-pic img{
+		margin-top: 50px;
+		max-width: 95%;
+	}
+	.profile-title{
+		text-align: center;
+		width: 100%;
+	}
+	.profile-title h1{
+		margin-top: 60px;
+		line-height: 40px;
+		font-size: 35px;
+		margin-left: 20px;
+		margin-right: 20px;
+
+	}
+	.profile-title h2{
+		padding-top: 70px;
+		font-size: 20px;
+		margin-right: 20px;
+		margin-left: 20px;
+		margin-top: 20px;
+
+	}
+	.profile-title span{
+		color: #f27609;
+		display: block;
+		font-size: 20px;
+
+	}
+	.main{
+		padding: 10px 5% 40px 5%;
+	}
+	.main a{
+		overflow-wrap:break-word ;
+		word-wrap: break-word;
+		color: #f27609;	
+		text-decoration: none;
+	}
+	.main p{
+		text-align: left;
+		line-height: 30px;
+	}
+	.caminho li{
+		font-size: 12px;
+	}
+	.cv-pic{
+		float: none;
+		max-width: 100%;
+		margin-right: 0px;
+	}
+	.miniatura{
+		max-width: 100%;
+		background-size: auto 100%;
+	}
+	.blackbox{
+		opacity: 0.8;
+	}
+	.menujs{
+		
+		height: auto;
+	}
+	.menujs ul{
+		text-align: center;
+		height: auto;
+		padding-right: 15%;
+		padding-left: 15%;
+	}
+	.menujs li{
+		display: block;
+		border-bottom: solid grey 1px;
+		width: 100%;
+		padding: 0;
+	}
+}
