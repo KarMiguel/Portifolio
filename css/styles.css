@@ -159,7 +159,10 @@ body{
 	margin-right: 15px;
 	margin-bottom: 15px;
 	background-size: contain;
+	background-size: 100% ; 
 	overflow: hidden;
+	background-repeat: no-repeat;
+	background-size: cover; 
 	background-repeat: no-repeat;
 }
 .miniatura a{
