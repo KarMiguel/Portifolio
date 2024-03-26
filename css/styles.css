@@ -153,10 +153,10 @@ body{
 	margin-right: 10px;
 }
 .miniatura{
-	width: 320px;
+	width: 32%;
 	height: 320px;
 	display: inline-block;
-	margin-right: 15px;
+	margin-right: 1%;
 	margin-bottom: 15px;
 	background-size: contain;
 	background-size: 100% ; 
@@ -184,6 +184,11 @@ body{
 .blackbox-text{
 	text-align: center;
 	
+}
+ul> li{
+	font-size: 15px;
+	color: white;
+	font-weight: 100;
 }
 .blackbox h1{
 	font-size: 16px;
