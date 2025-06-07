@@ -1,165 +1,176 @@
 <!DOCTYPE html>
 
 <html lang="pt-BR">
+  <head>
+    <title>Portfolio - Carlos Miguel</title>
 
-	<head>
-		<title>Portfolio - Carlos Miguel</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:100,400"
+      rel="stylesheet"
+    />
+    <script type="text/javascript" src="js/scripts.js"></script>
+    <meta name="viewport" content="width=device-width,inital-scale=1.0" />
+  </head>
 
-		<meta charset="utf-8">
-		<link rel="stylesheet" href="css/styles.css">
-		<link href="https://fonts.googleapis.com/css?family=Montserrat:100,400" rel="stylesheet">
-		<script type="text/javascript" src="js/scripts.js"></script>
-		<meta name="viewport" content="width=device-width,inital-scale=1.0">
+  <body>
+    <div id="navigation" class="navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="curriculo.html">Currículo</a></li>
+        <li><a href="contato.html"> Contato</a></li>
+        <li id="threeline-icon" class="threeline-icon" onclick="openNav()">
+          &#9776;
+        </li>
+      </ul>
+    </div>
 
+    <div class="main">
+      <ul class="caminho">
+        <li><a href="index.html">Home</a></li>
+        <li>></li>
+        <li>Portfolio</li>
+      </ul>
 
-	</head>
+      <h1>Portfolio</h1>
 
+      <div
+        style="background-image: url('img/cap-zip-capa.png')"
+        class="miniatura"
+      >
+        <a target="_blank" href="https://capi-zip.vercel.app/">
+          <div class="blackbox">
+            <div class="blackbox-text">
+              <h1>
+                Encurtador de Link com rastreamento e gerenciamento dos links
+              </h1>
+              <h2>Realizei Desenvolvimento Back End desse projeto</h2>
+            </div>
+          </div>
+        </a>
+      </div>
 
-	<body>
+      <div
+        style="background-image: url('img/servide-provided.png')"
+        class="miniatura"
+      >
+        <a target="_blank" href="https://service-provided.netlify.app">
+          <div class="blackbox">
+            <div class="blackbox-text">
+              <h1>Serviços Prestados</h1>
+              <h2>Desenvolvimento Full Stack Spring e Angular</h2>
+            </div>
+          </div>
+        </a>
+      </div>
 
-			<div id="navigation" class="navigation">
-				<ul>
-					<li><a href="index.html">Home</a></li>
-					<li><a href="portfolio.html">Portfolio</a></li>
-					<li><a href="curriculo.html">Currículo</a></li>
-					<li><a href="contato.html"> Contato</a></li>
-					<li id="threeline-icon" class="threeline-icon" onclick="openNav()">&#9776;</li>
-				</ul>
-			</div>
+      <div
+        style="background-image: url('img/restaurante.jpg')"
+        class="miniatura"
+      >
+        <a target="_blank" href="https://karmiguel.github.io/Cardapio-Online/">
+          <div class="blackbox">
+            <div class="blackbox-text">
+              <h1>Restaurante</h1>
+              <h2>Cardapio Online</h2>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div style="background-image: url('img/buzz.avif')" class="miniatura">
+        <a target="_blank" href="https://buzz-feed.netlify.app/">
+          <div class="blackbox">
+            <div class="blackbox-text">
+              <h1>QUIZZ</h1>
+              <h2>Super Heroi ou Vilão?</h2>
+            </div>
+          </div>
+        </a>
+      </div>
 
-						
-			<div class= "main">
-				
-				
-				<ul class="caminho">
-					<li><a href="index.html">Home</a></li>
-					<li>></li>
-					<li>Portfolio</li>
-				</ul>
-
-				<h1>Portfolio</h1>
-				
-				
-				<div  style="background-image:url('img/cap-zip-capa.png')"class="miniatura">
-					<a target="_blank" href="https://capi-zip.vercel.app/">
-					<div class="blackbox">
-						<div class="blackbox-text">
-							<h1>Encurtador de Link com rastreamento e gerenciamento dos links</h1>
-							<h2>Realizei Desenvolvimento Back End desse projeto </h2>
-						</div>
-					</div>
-					</a>
-				</div>	
-				
-				<div  style="background-image:url('img/servide-provided.png')"class="miniatura">
-					<a target="_blank" href="https://service-provided.netlify.app">
-					<div class="blackbox">
-						<div class="blackbox-text">
-							<h1>Serviços Prestados</h1>
-							<h2>Desenvolvimento Full Stack Spring e Angular</h2>
-						</div>
-					</div>
-					</a>
-				</div>	
-				
-				<div  style="background-image:url('img/restaurante.jpg')"class="miniatura">
-					<a target="_blank" href="https://karmiguel.github.io/Cardapio-Online/">
-					<div class="blackbox">
-						<div class="blackbox-text">
-							<h1>Restaurante</h1>
-							<h2>Cardapio Online</h2>
-						</div>
-					</div>
-					</a>
-				</div>	
-				<div style="background-image:url('img/buzz.avif')"class="miniatura">
-					<a  target="_blank" href="https://buzz-feed.netlify.app/">
-					<div class="blackbox">
-						<div class="blackbox-text">
-							<h1>QUIZZ</h1>
-							<h2>Super Heroi ou Vilão?</h2>
-						</div>
-					</div>
-					</a>
-				</div>
-				<div  style="background-image:url('img/banner.png')"class="miniatura">
-					<a target="_blank" href="https://karmiguel.github.io/Land_Page_Atletico-MG/">
-					<div class="blackbox">
-						<div class="blackbox-text">
-							<h1>Notícias Atlético Mineiro</h1>
-							<h2>Land Page e owlCarousel</h2>
-						</div>
-					</div>
-					</a>
-				</div>	
-				<div style="background-image:url('img/cliente.jpg')"class="miniatura">
-					<a  target="_blank" href="http://crud-cliente.000webhostapp.com/">
-					<div class="blackbox">
-						<div class="blackbox-text">
-							<h1>Cadastro Cliente</h1>
-							<h2>CRUD</h2>
-						</div>
-					</div>
-					</a>
-				</div>		
-				<div style="background-image:url('img/cronometro-partida.png')"class="miniatura">
-					<a  target="_blank" href="https://karmiguel.github.io/Cronometro-Partida-Futebol/">
-					<div class="blackbox">
-						<div class="blackbox-text">
-							<h1>Cronômetro e Placar</h1>
-							<h2>Partida de Futebol</h2>
-						</div>
-					</div>
-					</a>
-				</div>
-				<div style="background-image:url('img/monitoria.jpg')"class="miniatura">
-					<a target="_blank" href="https://karmiguel.github.io/Cadastro-Evento/">
-					<div class="blackbox">
-						<div class="blackbox-text">
-							<h1>Monitoria de Algoritmo</h1>
-							<h2>cadastro para Monitoria</h2>
-						</div>
-					</div>
-					</a>
-				</div>
-				<div style="background-image:url('img/tarefas.jpg')"class="miniatura">
-					<a  target="_blank" href="https://karmiguel.github.io/Lista-Tarefas/">
-					<div class="blackbox">
-						<div class="blackbox-text">
-							<h1>Lista de Tarefas</h1>
-							<h2>Controle de Tarefas</h2>
-						</div>
-					</div>
-					</a>
-				</div>		
-				<div style="background-image:url('img/ccb3.jpg')"class="miniatura">
-					<a target="_blank" href="https://karmiguel.github.io/Replica-site-G1/">
-					<div class="blackbox">
-						<div class="blackbox-text">
-							<h1>Princípios éticos na TI</h1>
-							<h2>Réplica site G1</h2>
-						</div>
-					</div>
-					</a>
-				</div>	
-				<div style="background-image:url('img/git.jpg')"class="miniatura">
-					<a target="_blank" href="https://github.com/KarMiguel?tab=repositories">
-					<div class="blackbox">
-						<div class="blackbox-text">
-							<h1>Projetos Back-End</h1>
-							<h2>Repositorio GitHub</h2>
-						</div>
-					</div>
-					</a>
-				</div>		
-				<br><br><br>
-				<a class="back-link" href="index.html">&larr;Voltar ao início</a>
-				
-
-			</div>	
-
-			
-
-	</body>
-
+      <div style="background-image: url('img/banner.png')" class="miniatura">
+        <a
+          target="_blank"
+          href="https://karmiguel.github.io/Land_Page_Atletico-MG/"
+        >
+          <div class="blackbox">
+            <div class="blackbox-text">
+              <h1>Notícias Atlético Mineiro</h1>
+              <h2>Land Page e owlCarousel</h2>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div style="background-image: url('img/cliente.jpg')" class="miniatura">
+        <a target="_blank" href="http://crud-cliente.000webhostapp.com/">
+          <div class="blackbox">
+            <div class="blackbox-text">
+              <h1>Cadastro Cliente</h1>
+              <h2>CRUD</h2>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div
+        style="background-image: url('img/cronometro-partida.png')"
+        class="miniatura"
+      >
+        <a
+          target="_blank"
+          href="https://karmiguel.github.io/Cronometro-Partida-Futebol/"
+        >
+          <div class="blackbox">
+            <div class="blackbox-text">
+              <h1>Cronômetro e Placar</h1>
+              <h2>Partida de Futebol</h2>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div style="background-image: url('img/monitoria.jpg')" class="miniatura">
+        <a target="_blank" href="https://karmiguel.github.io/Cadastro-Evento/">
+          <div class="blackbox">
+            <div class="blackbox-text">
+              <h1>Monitoria de Algoritmo</h1>
+              <h2>cadastro para Monitoria</h2>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div style="background-image: url('img/tarefas.jpg')" class="miniatura">
+        <a target="_blank" href="https://karmiguel.github.io/Lista-Tarefas/">
+          <div class="blackbox">
+            <div class="blackbox-text">
+              <h1>Lista de Tarefas</h1>
+              <h2>Controle de Tarefas</h2>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div style="background-image: url('img/ccb3.jpg')" class="miniatura">
+        <a target="_blank" href="https://karmiguel.github.io/Replica-site-G1/">
+          <div class="blackbox">
+            <div class="blackbox-text">
+              <h1>Princípios éticos na TI</h1>
+              <h2>Réplica site G1</h2>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div style="background-image: url('img/git.jpg')" class="miniatura">
+        <a target="_blank" href="https://github.com/KarMiguel?tab=repositories">
+          <div class="blackbox">
+            <div class="blackbox-text">
+              <h1>Projetos Back-End</h1>
+              <h2>Repositorio GitHub</h2>
+            </div>
+          </div>
+        </a>
+      </div>
+      <br /><br /><br />
+      <a class="back-link" href="index.html">&larr;Voltar ao início</a>
+    </div>
+  </body>
 </html>
