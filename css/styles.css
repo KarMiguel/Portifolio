@@ -1,3 +1,6 @@
+html{
+	scroll-behavior: smooth;
+}
 html,body{
 	margin: 0;/*retirar a margem*/
 	padding: 0;
@@ -6,11 +9,19 @@ html,body{
 body{
 	background-color: #2b2b2b;
 	font-family: 'Montserrat', sans-serif;
+	overflow-x: hidden;
 }
 .navigation{
-	background-color: #2b2b2b;
+	background-color: rgba(43, 43, 43, 0.95);
 	color: white;
 	height: 50px;/*espaço da barra de cima*/
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 1000;
+	backdrop-filter: blur(10px);
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+	transition: all 0.3s ease;
 }
 .navigation ul{
 	margin-top: 0;/*retirar margem do topo*/
@@ -31,9 +42,25 @@ body{
 .navigation a{
 	color: white;	
 	text-decoration: none;
+	position: relative;
+	transition: color 0.3s ease;
+}
+.navigation a::after {
+	content: '';
+	position: absolute;
+	width: 0;
+	height: 2px;
+	bottom: -5px;
+	left: 50%;
+	background-color: #f27609;
+	transition: all 0.3s ease;
+	transform: translateX(-50%);
 }
 .navigation a:hover{
 	color: #f27609;
+}
+.navigation a:hover::after {
+	width: 80%;
 }
 .navigation li.threeline-icon{
 	display: none;
@@ -44,6 +71,11 @@ body{
 }
 .capa{
 	color: white;
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding-top: 50px;
 }
 .capa div{
 	display: inline-block;/*liberar os div*/
@@ -53,6 +85,14 @@ body{
 	width: 400px;
 	border-radius:400px ;/*arrendodar cantos da img*/
 	margin-top: 100px;
+	border: 5px solid rgba(242, 118, 9, 0.3);
+	transition: all 0.3s ease;
+	box-shadow: 0 10px 30px rgba(242, 118, 9, 0.2);
+}
+.profile-pic img:hover {
+	border-color: rgba(242, 118, 9, 0.6);
+	box-shadow: 0 15px 40px rgba(242, 118, 9, 0.4);
+	transform: scale(1.02);
 }
 .profile-pic{
 	width: 40%;
@@ -87,14 +127,26 @@ body{
 	font-size: 20px;
 	font-weight: 100;
 	margin-top: -25px;
+	opacity: 0.9;
+}
+.profile-title .download-btn {
+	animation: pulse 2s infinite;
+}
+@keyframes pulse {
+	0%, 100% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.05);
+	}
 }
 
 
 
 .main{
 	/*Margens do site,encima,direita,embaixo,esquerda*/
-	padding: 20px 180px 80px 100px;
-
+	padding: 80px 180px 80px 100px;
+	margin-top: 50px;
 	animation-name: conteudo ;
 	animation-duration: 2s;
 	
@@ -158,12 +210,18 @@ body{
 	display: inline-block;
 	margin-right: 1%;
 	margin-bottom: 15px;
-	background-size: contain;
-	background-size: 100% ; 
-	overflow: hidden;
-	background-repeat: no-repeat;
 	background-size: cover; 
 	background-repeat: no-repeat;
+	overflow: hidden;
+	border-radius: 10px;
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+	transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+	cursor: pointer;
+	position: relative;
+}
+.miniatura:hover {
+	transform: translateY(-10px) scale(1.02);
+	box-shadow: 0 8px 25px rgba(242, 118, 9, 0.4);
 }
 .miniatura a{
 	text-decoration: none;
@@ -172,18 +230,28 @@ body{
 .blackbox{
 	width: 100%;
 	height: 100%;
-	background-color: black;
+	background: linear-gradient(135deg, rgba(0, 0, 0, 0.85) 0%, rgba(242, 118, 9, 0.75) 100%);
 	opacity: 0;/*transpar*/
 	padding-top: 100px;
-	transition: 1s;
+	transition: all 0.4s ease;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 .blackbox:hover {
-	opacity:0.8 ;/*transparencia*/
-	transition:1s ;
+	opacity: 1;/*transparencia*/
+	transition: all 0.4s ease;
 }
 .blackbox-text{
 	text-align: center;
-	
+	padding: 20px;
+}
+.blackbox-text p {
+	color: white;
+	font-size: 13px;
+	line-height: 1.5;
+	margin-top: 10px;
+	font-weight: 100;
 }
 ul> li{
 	font-size: 15px;
@@ -208,6 +276,17 @@ ul> li{
 }
 .back-link{
 	color: #f27609;
+	display: inline-block;
+	padding: 10px 20px;
+	border: 2px solid #f27609;
+	border-radius: 5px;
+	transition: all 0.3s ease;
+	margin-top: 20px;
+}
+.back-link:hover {
+	background-color: #f27609;
+	color: #2b2b2b;
+	transform: translateX(-5px);
 }
 
 @keyframes profile-capa{
@@ -224,12 +303,113 @@ ul> li{
 	100%{opacity: 1;transform: translate(0px,0px);}
 }
 
+/* Botão voltar ao topo */
+.back-to-top {
+	position: fixed;
+	bottom: 30px;
+	right: 30px;
+	width: 50px;
+	height: 50px;
+	background: linear-gradient(135deg, #f27609 0%, #ff9500 100%);
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	font-size: 24px;
+	text-decoration: none;
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.3s ease;
+	box-shadow: 0 4px 15px rgba(242, 118, 9, 0.4);
+	z-index: 999;
+}
+.back-to-top.show {
+	opacity: 1;
+	visibility: visible;
+}
+.back-to-top:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 6px 20px rgba(242, 118, 9, 0.6);
+}
+
+/* Botão de download melhorado */
+.download-btn {
+	display: inline-block;
+	padding: 12px 30px;
+	background: linear-gradient(135deg, #f27609 0%, #ff9500 100%);
+	color: white;
+	text-decoration: none;
+	border-radius: 5px;
+	font-weight: 400;
+	transition: all 0.3s ease;
+	box-shadow: 0 4px 15px rgba(242, 118, 9, 0.3);
+	margin: 20px 0;
+}
+.download-btn:hover {
+	transform: translateY(-3px);
+	box-shadow: 0 6px 20px rgba(242, 118, 9, 0.5);
+}
+
+/* Animações de scroll */
+.fade-in {
+	opacity: 0;
+	transform: translateY(30px);
+	transition: all 0.6s ease;
+}
+.fade-in.visible {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+/* Melhorias nos cards do currículo */
+.cv-section {
+	background: rgba(255, 255, 255, 0.02);
+	padding: 20px;
+	border-radius: 10px;
+	margin-bottom: 20px;
+	border-left: 3px solid #f27609;
+	transition: all 0.3s ease;
+}
+.cv-section:hover {
+	background: rgba(255, 255, 255, 0.05);
+	transform: translateX(5px);
+}
+
+/* Efeito de typing na página inicial */
+.typing-effect {
+	border-right: 2px solid #f27609;
+	animation: blink 1s infinite;
+}
+
+@keyframes blink {
+	0%, 50% { border-color: transparent; }
+	51%, 100% { border-color: #f27609; }
+}
+
+/* Melhorias nos links sociais */
+.social-img {
+	transition: all 0.3s ease;
+	filter: grayscale(100%);
+}
+.social-img:hover {
+	transform: scale(1.1) rotate(5deg);
+	filter: grayscale(0%);
+}
+
 @media(max-width: 1000px){
 	.navigation li{
 		display: none;
 	}
 	.navigation li.threeline-icon{
 		display: inline-block;
+	}
+	.capa{
+		margin-top: 50px;
+	}
+	.capa{
+		min-height: auto;
+		padding-top: 70px;
 	}
 	.capa div{
 		display: block;
@@ -241,6 +421,7 @@ ul> li{
 	.profile-pic img{
 		margin-top: 50px;
 		max-width: 95%;
+		width: 250px;
 	}
 	.profile-title{
 		text-align: center;
@@ -269,7 +450,8 @@ ul> li{
 
 	}
 	.main{
-		padding: 10px 5% 40px 5%;
+		padding: 80px 5% 40px 5%;
+		margin-top: 50px;
 	}
 	.main a{
 		overflow-wrap:break-word ;
@@ -311,5 +493,16 @@ ul> li{
 		border-bottom: solid grey 1px;
 		width: 100%;
 		padding: 0;
+	}
+	.back-to-top {
+		bottom: 20px;
+		right: 20px;
+		width: 45px;
+		height: 45px;
+		font-size: 20px;
+	}
+	.download-btn {
+		padding: 10px 20px;
+		font-size: 14px;
 	}
 }
