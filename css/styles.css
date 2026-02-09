@@ -202,12 +202,27 @@ body{
 	font-size: 16px;
 	text-transform: uppercase;
 	font-weight: normal;
-	margin-top: 40px;
+	margin-top: 30px;
+	margin-bottom: 12px;
+}
+
+.cv-section hr {
+	margin: 8px 0 15px 0;
+	border: none;
+	border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
 .main h3{
 	color: #f27609;
 	font-size: 12px;
 	text-transform: uppercase;
+}
+
+/* Sobrescrever estilo padrão do h3 para títulos de empresa */
+.experience-section .company-title,
+.main h3.company-title {
+	color: #fff !important;
+	font-weight: 700;
+	font-size: 14px;
 }
 .main p{
 	color: white;
@@ -500,21 +515,364 @@ ul> li{
 	transform: translateY(0);
 }
 
-/* Melhorias nos cards do currículo */
+/* Melhorias nos cards do currículo - padrão em todas as seções */
 .cv-section {
 	background: rgba(255, 255, 255, 0.02);
-	padding: 20px;
-	border-radius: 10px;
-	margin-bottom: 20px;
+	padding: 0;
+	border-radius: 8px;
+	margin-bottom: 18px;
+	border: 1px solid rgba(242, 118, 9, 0.2);
 	border-left: 3px solid #f27609;
 	transition: all 0.3s ease;
+	overflow: hidden;
+}
+.cv-section-header {
+	padding: 12px 18px 0 18px;
+}
+.cv-section-header h2 {
+	margin-top: 0;
+}
+.cv-section-extras .cv-section-header h2 {
+	color: #f27609;
+	font-weight: 600;
+}
+.cv-section-body {
+	padding: 12px 18px 16px 18px;
+}
+.cv-section-body .cv-blocks {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+.cv-blocks-inline {
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 12px;
+}
+/* Bloco padrão: label + value (interativo) */
+.cv-block {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+	padding: 12px 14px;
+	background: rgba(255, 255, 255, 0.03);
+	border-radius: 6px;
+	border-left: 3px solid rgba(242, 118, 9, 0.4);
+	transition: all 0.25s ease;
+}
+@media (hover: hover) {
+	.cv-block:hover {
+		background: rgba(255, 255, 255, 0.06);
+		border-left-color: rgba(242, 118, 9, 0.7);
+		transform: translateX(3px);
+	}
+}
+.cv-label {
+	color: #f27609;
+	font-size: 13px;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.3px;
+}
+.cv-value {
+	color: rgba(255, 255, 255, 0.95);
+	font-size: 15px;
+	line-height: 1.5;
+}
+.cv-value a {
+	color: #f27609;
+	text-decoration: none;
+	transition: color 0.2s ease;
+}
+@media (hover: hover) {
+	.cv-value a:hover {
+		color: #ff9500;
+		text-decoration: underline;
+	}
+}
+.cv-desc {
+	color: rgba(255, 255, 255, 0.75);
+	font-size: 14px;
+	line-height: 1.5;
+	margin-top: 2px;
+}
+.cv-block-highlight {
+	border-left-color: #f27609;
+}
+.cv-link {
+	display: inline-block;
+	margin-top: 8px;
+	font-size: 14px;
+	color: #f27609;
+}
+/* Dados Pessoais: foto + blocos */
+.cv-section-body .cv-pic {
+	float: left;
+	width: 180px;
+	margin-right: 24px;
+	margin-bottom: 12px;
+	border-radius: 8px;
+}
+.cv-section-body .cv-blocks {
+	overflow: hidden;
+}
+
+/* Dados Pessoais: duas colunas (4 itens cada), sem foto */
+.cv-section-dados .cv-section-body {
+	padding-top: 10px;
+}
+.cv-section-dados .cv-section-body .cv-blocks-two-cols {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 14px 28px;
+}
+.cv-blocks-two-cols .cv-block {
+	min-width: 0;
+	padding: 10px 12px;
+}
+.cv-block-dado {
+	display: grid;
+	grid-template-columns: auto 1fr;
+	align-items: center;
+	gap: 0 12px;
+}
+.cv-block-dado .cv-label {
+	margin-bottom: 0;
+	font-size: 12px;
+	text-align: left;
+	flex-shrink: 0;
+}
+.cv-block-dado .cv-value {
+	font-size: 14px;
+	word-break: break-word;
+	text-align: left;
+}
+@media (hover: hover) {
+	.cv-block-dado:hover {
+		background: rgba(255, 255, 255, 0.06);
+	}
+}
+@media (max-width: 700px) {
+	.cv-section-dados .cv-section-body .cv-blocks-two-cols {
+		grid-template-columns: 1fr;
+		gap: 10px;
+	}
+	.cv-block-dado {
+		grid-template-columns: 1fr;
+		gap: 4px;
+		align-items: start;
+	}
+	.cv-block-dado .cv-label {
+		text-align: left;
+	}
+	.cv-block-dado .cv-value {
+		text-align: left;
+	}
+}
+
+/* Tecnologias: lista em blocos */
+.cv-tech-list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.cv-section-tech .cv-section-body .cv-tech-list {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 12px 24px;
+}
+.cv-tech-list .cv-block {
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: baseline;
+	gap: 8px;
+	min-width: 0;
+}
+.cv-tech-list .cv-label {
+	min-width: 120px;
+	font-size: 12px;
+}
+@media (max-width: 700px) {
+	.cv-section-tech .cv-section-body .cv-tech-list {
+		grid-template-columns: 1fr;
+		gap: 10px;
+	}
+}
+/* Cursos */
+.cv-block-course {
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: baseline;
+	gap: 6px;
+}
+.cv-block-course .cv-desc {
+	color: rgba(255, 255, 255, 0.6);
+	font-size: 13px;
+}
+/* Atividade Extracurricular */
+.cv-block-activity {
+	gap: 6px;
+}
+.cv-block-activity .cv-label {
+	font-size: 12px;
+}
+/* Idiomas */
+.cv-block-lang {
+	flex-direction: row;
+	align-items: center;
+	gap: 10px;
+	max-width: 200px;
+}
+.cv-block-lang .cv-label {
+	margin-bottom: 0;
+}
+/* GitHub: link único */
+.cv-block-link {
+	align-items: flex-start;
+}
+.cv-block-link .cv-value {
+	font-size: 16px;
 }
 /* Hover apenas em dispositivos que suportam (desktop) */
 @media (hover: hover) {
 	.cv-section:hover {
-		background: rgba(255, 255, 255, 0.05);
-		transform: translateX(5px);
+		background: rgba(255, 255, 255, 0.04);
+		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 	}
+}
+
+/* Estilos específicos para seção de experiência (mesma borda que Formação) */
+.experience-section {
+	position: relative;
+}
+.experience-section .cv-section-body {
+	padding-left: 18px;
+	position: relative;
+}
+
+.experience-item {
+	margin-bottom: 24px;
+	position: relative;
+	padding-left: 20px;
+}
+
+.experience-item:last-child {
+	margin-bottom: 0;
+}
+
+.company-title {
+	color: #fff;
+	font-size: 13px;
+	text-transform: uppercase;
+	font-weight: 700;
+	letter-spacing: 0.3px;
+	margin-bottom: 10px;
+	margin-top: 0;
+	position: relative;
+	padding-left: 12px;
+	line-height: 1.3;
+}
+
+.company-title::before {
+	content: '';
+	position: absolute;
+	left: -20px;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 8px;
+	height: 8px;
+	background-color: #f27609;
+	border-radius: 50%;
+	border: 2px solid #2b2b2b;
+	box-shadow: 0 0 0 1px rgba(242, 118, 9, 0.6);
+	z-index: 2;
+}
+
+.project-list {
+	margin-top: 6px;
+	margin-bottom: 0;
+	padding-left: 15px;
+	list-style-type: none;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.experience-section .project-list,
+.experience-section .project-block .project-desc {
+	overflow-wrap: break-word;
+	max-width: 100%;
+}
+
+.project-list li {
+	line-height: 1.5;
+	padding-left: 18px;
+	position: relative;
+	color: rgba(255, 255, 255, 0.9);
+	font-size: 14px;
+	overflow: visible;
+	word-wrap: break-word;
+	list-style: none;
+}
+
+.project-list li::before {
+	content: '▸';
+	position: absolute;
+	left: 0;
+	color: #f27609;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+/* Bloco de projeto: mesmo padrão em todas as experiências */
+.project-block {
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+	padding: 12px 14px;
+	background: rgba(255, 255, 255, 0.04);
+	border-radius: 6px;
+	border-left: 3px solid rgba(242, 118, 9, 0.5);
+	transition: all 0.25s ease;
+}
+
+@media (hover: hover) {
+	.project-block:hover {
+		background: rgba(255, 255, 255, 0.07);
+		border-left-color: rgba(242, 118, 9, 0.8);
+		transform: translateX(3px);
+	}
+}
+
+.project-block .project-name {
+	display: block;
+	color: #f27609;
+	font-weight: 600;
+	font-size: 14px;
+	letter-spacing: 0.2px;
+}
+
+.project-block .project-name + .project-desc {
+	margin-top: 2px;
+}
+
+.project-block .project-desc {
+	display: block;
+	color: rgba(255, 255, 255, 0.9);
+	font-size: 14px;
+	line-height: 1.55;
+	overflow: visible;
+	word-wrap: break-word;
+}
+
+.project-name {
+	color: #f27609;
+	font-weight: 600;
+}
+
+.tech-highlight {
+	color: #ff9500;
+	font-weight: 500;
 }
 
 /* Efeito de typing na página inicial */
@@ -529,6 +887,48 @@ ul> li{
 }
 
 /* Melhorias nos links sociais */
+/* Página de Contato */
+.cv-section-contato .contato-intro {
+	margin: 0 0 16px 0;
+	color: rgba(255, 255, 255, 0.85);
+	font-size: 15px;
+	line-height: 1.5;
+}
+.cv-section-contato .cv-section-body .cv-blocks-contato {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 16px 24px;
+}
+.cv-blocks-contato .cv-block-dado .cv-value a {
+	display: inline-block;
+	margin-bottom: 4px;
+}
+.social-links {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
+	align-items: center;
+	margin-top: 8px;
+}
+.social-link {
+	display: inline-block;
+	transition: transform 0.25s ease;
+}
+@media (hover: hover) {
+	.social-link:hover {
+		transform: scale(1.1);
+	}
+}
+@media (max-width: 600px) {
+	.cv-section-contato .cv-section-body .cv-blocks-contato {
+		grid-template-columns: 1fr;
+		gap: 12px;
+	}
+	.social-links {
+		gap: 16px;
+	}
+}
+
 .social-img {
 	transition: all 0.3s ease;
 	filter: grayscale(100%);
@@ -682,6 +1082,26 @@ ul> li{
 		max-width: 100%;
 		margin-right: 0px;
 	}
+	.cv-section-body .cv-pic {
+		width: 100%;
+		max-width: 200px;
+		display: block;
+		margin-bottom: 16px;
+		float: none;
+	}
+	.cv-blocks-inline {
+		flex-direction: column;
+	}
+	.cv-block {
+		padding: 10px 12px;
+	}
+	.cv-tech-list .cv-block {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	.cv-tech-list .cv-label {
+		min-width: auto;
+	}
 	.cv-action-buttons {
 		flex-direction: column;
 		align-items: stretch;
@@ -743,6 +1163,45 @@ ul> li{
 	.cv-action-buttons .download-btn {
 		width: 100% !important;
 		max-width: 100% !important;
+	}
+	
+	/* Ajustes para seção de experiência em mobile */
+	.experience-section {
+		padding-left: 18px;
+		padding-top: 8px;
+		padding-bottom: 8px;
+	}
+	
+	
+	.experience-item {
+		padding-left: 18px;
+		margin-bottom: 18px;
+	}
+	
+	.company-title {
+		font-size: 12px;
+		padding-left: 10px;
+		margin-bottom: 6px;
+	}
+	
+	.company-title::before {
+		left: -18px;
+		width: 8px;
+		height: 8px;
+		border-width: 2px;
+		box-shadow: 0 0 0 1px #f27609;
+	}
+	
+	.project-list {
+		padding-left: 12px;
+		margin-top: 4px;
+	}
+	
+	.project-list li {
+		padding-left: 16px;
+		font-size: 13px;
+		margin-bottom: 7px;
+		line-height: 1.4;
 	}
 }
 
@@ -871,6 +1330,44 @@ ul> li{
 	.profile-buttons .download-btn:first-child {
 		margin-bottom: 25px !important;
 	}
+	
+	/* Ajustes adicionais para experiência em telas muito pequenas */
+	.experience-section {
+		padding-left: 15px;
+		padding-top: 6px;
+		padding-bottom: 6px;
+	}
+	
+	.experience-item {
+		padding-left: 15px;
+		margin-bottom: 16px;
+	}
+	
+	.company-title {
+		font-size: 11px;
+		padding-left: 8px;
+		line-height: 1.3;
+		margin-bottom: 5px;
+	}
+	
+	.company-title::before {
+		left: -15px;
+		width: 7px;
+		height: 7px;
+		border-width: 1.5px;
+	}
+	
+	.project-list {
+		padding-left: 10px;
+		margin-top: 3px;
+	}
+	
+	.project-list li {
+		font-size: 12px;
+		padding-left: 14px;
+		line-height: 1.4;
+		margin-bottom: 6px;
+	}
 }
 
 /* Estilos de impressão */
@@ -955,6 +1452,38 @@ ul> li{
 	.cv-section li {
 		margin-bottom: 8px;
 		line-height: 1.6;
+	}
+	
+	.cv-block {
+		background: #f8f8f8 !important;
+		border-left-color: #f27609 !important;
+	}
+	.cv-label {
+		color: #f27609 !important;
+	}
+	.cv-value,
+	.cv-desc {
+		color: #333 !important;
+	}
+	.cv-section-body .cv-pic {
+		max-width: 180px;
+	}
+	
+	.company-title::before {
+		display: none;
+	}
+	
+	.project-list li::before {
+		content: '•';
+		color: #f27609;
+	}
+	
+	.project-name {
+		color: #f27609 !important;
+	}
+	
+	.tech-highlight {
+		color: #ff9500 !important;
 	}
 	
 	@page {
