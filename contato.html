@@ -78,14 +78,84 @@
 						</div>
 					</div>
 				</div>
+
+				<div class="cv-section cv-section-cnpj fade-in">
+					<div class="cv-section-header cv-section-header-cnpj">
+						<h2>Dados da Empresa</h2>
+						<span class="cnpj-badge cnpj-badge-ativa" title="Empresa em situação regular">Ativa</span>
+						<hr>
+					</div>
+					<div class="cv-section-body">
+						<p class="contato-intro">Informações de registro para contratos e emissão de notas. CNPJ regular perante a Receita Federal.</p>
+						<div class="cnpj-grid">
+							<div class="cnpj-card cnpj-card-destaque">
+								<span class="cv-label">Razão Social</span>
+								<span class="cv-value">55.900.424 Carlos Miguel dos Santos Alves</span>
+							</div>
+							<div class="cnpj-card">
+								<span class="cv-label">CNPJ</span>
+								<span class="cv-value">55.900.424/0001-02</span>
+								<span class="cv-desc">55900424000102</span>
+							</div>
+							<div class="cnpj-card">
+								<span class="cv-label">Inscrição Estadual (MG)</span>
+								<span class="cv-value">004941022.00-25</span>
+							</div>
+							<div class="cnpj-card">
+								<span class="cv-label">Porte</span>
+								<span class="cv-value">Microempreendedor Individual (MEI)</span>
+							</div>
+							<div class="cnpj-card">
+								<span class="cv-label">Natureza Jurídica</span>
+								<span class="cv-value">Empresário (Individual)</span>
+							</div>
+							<div class="cnpj-card">
+								<span class="cv-label">Data da Abertura</span>
+								<span class="cv-value">11/07/2024</span>
+								<span class="cv-desc" id="cnpj-tempo-abertura">—</span>
+							</div>
+							<div class="cnpj-card">
+								<span class="cv-label">Situação Cadastral</span>
+								<span class="cv-value">Ativa</span>
+								<span class="cv-desc">Desde 11/07/2024</span>
+							</div>
+							<div class="cnpj-card">
+								<span class="cv-label">Tipo</span>
+								<span class="cv-value">Matriz</span>
+							</div>
+							<div class="cnpj-card">
+								<span class="cv-label">Simples Nacional</span>
+								<span class="cv-value">Optante</span>
+								<span class="cv-desc">Desde 11/07/2024</span>
+							</div>
+						</div>
+					</div>
+				</div>
 				
 				<br><br>
 				<a class="back-link" href="index.html">&larr;Voltar ao início</a>
 			</div>
 
-			<a href="#" class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">↑</a>	
+			<a href="#" class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">↑</a>
 
-			
+			<script>
+			(function() {
+				var abertura = new Date(2024, 6, 11);
+				var hoje = new Date();
+				var anos = hoje.getFullYear() - abertura.getFullYear();
+				var meses = hoje.getMonth() - abertura.getMonth();
+				var dias = hoje.getDate() - abertura.getDate();
+				if (dias < 0) { meses--; dias += new Date(hoje.getFullYear(), hoje.getMonth(), 0).getDate(); }
+				if (meses < 0) { anos--; meses += 12; }
+				var partes = [];
+				if (anos > 0) partes.push(anos + (anos === 1 ? ' ano' : ' anos'));
+				if (meses > 0) partes.push(meses + (meses === 1 ? ' mês' : ' meses'));
+				if (dias > 0) partes.push(dias + (dias === 1 ? ' dia' : ' dias'));
+				var texto = partes.length ? partes.join(', ').replace(/, ([^,]+)$/, ' e $1') : '0 dias';
+				var el = document.getElementById('cnpj-tempo-abertura');
+				if (el) el.textContent = texto;
+			})();
+			</script>
 
 	</body>
 

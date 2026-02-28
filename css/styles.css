@@ -929,6 +929,105 @@ ul> li{
 	}
 }
 
+/* Seção CNPJ / Dados da Empresa */
+.cv-section-cnpj {
+	border-left-color: rgba(76, 175, 80, 0.6);
+}
+.cv-section-header-cnpj {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 12px 16px;
+}
+.cv-section-header-cnpj h2 {
+	margin: 0;
+}
+.cnpj-badge {
+	display: inline-block;
+	padding: 4px 12px;
+	border-radius: 20px;
+	font-size: 12px;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+}
+.cnpj-badge-ativa {
+	background: linear-gradient(135deg, rgba(76, 175, 80, 0.25) 0%, rgba(56, 142, 60, 0.35) 100%);
+	color: #81c784;
+	border: 1px solid rgba(76, 175, 80, 0.5);
+	box-shadow: 0 2px 8px rgba(76, 175, 80, 0.2);
+}
+.cv-section-cnpj .contato-intro {
+	margin: 0 0 20px 0;
+	color: rgba(255, 255, 255, 0.8);
+	font-size: 14px;
+	line-height: 1.5;
+}
+.cnpj-grid {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 14px 18px;
+}
+.cnpj-card {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+	padding: 14px 16px;
+	background: rgba(255, 255, 255, 0.03);
+	border-radius: 8px;
+	border-left: 3px solid rgba(242, 118, 9, 0.4);
+	transition: all 0.25s ease;
+}
+@media (hover: hover) {
+	.cnpj-card:hover {
+		background: rgba(255, 255, 255, 0.06);
+		border-left-color: rgba(242, 118, 9, 0.7);
+		transform: translateX(3px);
+	}
+}
+.cnpj-card .cv-label {
+	color: #f27609;
+	font-size: 11px;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.3px;
+}
+.cnpj-card .cv-value {
+	color: rgba(255, 255, 255, 0.95);
+	font-size: 14px;
+	line-height: 1.4;
+	font-weight: 400;
+}
+.cnpj-card .cv-desc {
+	color: rgba(255, 255, 255, 0.55);
+	font-size: 12px;
+	margin-top: 2px;
+}
+.cnpj-card-destaque {
+	grid-column: 1 / -1;
+	border-left-color: rgba(76, 175, 80, 0.5);
+	background: rgba(76, 175, 80, 0.06);
+}
+.cnpj-card-destaque .cv-value {
+	font-size: 15px;
+	font-weight: 500;
+	color: #fff;
+}
+@media (max-width: 900px) {
+	.cnpj-grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+@media (max-width: 600px) {
+	.cnpj-grid {
+		grid-template-columns: 1fr;
+		gap: 12px;
+	}
+	.cnpj-card-destaque {
+		grid-column: 1;
+	}
+}
+
 .social-img {
 	transition: all 0.3s ease;
 	filter: grayscale(100%);
@@ -1484,6 +1583,30 @@ ul> li{
 	
 	.tech-highlight {
 		color: #ff9500 !important;
+	}
+	
+	.cv-section-cnpj {
+		background: white !important;
+		border-left-color: rgba(76, 175, 80, 0.8) !important;
+	}
+	.cnpj-badge-ativa {
+		background: #e8f5e9 !important;
+		color: #2e7d32 !important;
+		border-color: #81c784 !important;
+	}
+	.cnpj-card {
+		background: #f8f8f8 !important;
+		border-left-color: #f27609 !important;
+	}
+	.cnpj-card .cv-value,
+	.cnpj-card .cv-desc {
+		color: #333 !important;
+	}
+	.cnpj-card-destaque {
+		background: #e8f5e9 !important;
+	}
+	.cnpj-card-destaque .cv-value {
+		color: #1b5e20 !important;
 	}
 	
 	@page {
