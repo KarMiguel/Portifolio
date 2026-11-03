@@ -793,6 +793,24 @@ strong {
 	color: #fff;
 }
 
+.project-thumb-text {
+	font-size: 26px;
+	line-height: 1.25;
+	text-align: center;
+	padding: 24px;
+}
+
+.project-static:hover {
+	transform: none;
+}
+
+.project-link-muted,
+.project:hover .project-link-muted {
+	color: var(--text-muted);
+	font-weight: 500;
+	gap: 6px;
+}
+
 .project-badge {
 	position: absolute;
 	top: 14px;
