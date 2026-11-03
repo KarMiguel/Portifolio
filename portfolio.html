@@ -1,294 +1,296 @@
 <!DOCTYPE html>
-
 <html lang="pt-BR">
   <head>
-    <title>Portfolio - Carlos Miguel</title>
-    <link rel="icon" href="img/eu-perfil.png" type="image/png" />
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="css/styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projetos | Carlos Miguel</title>
+    <meta name="description" content="Projetos de Carlos Miguel: CRMs com IA, sistemas Full Stack, APIs e interfaces web." />
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicon-180.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css?family=Montserrat:100,400"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <script type="text/javascript" src="js/scripts.js"></script>
-    <meta name="viewport" content="width=device-width,inital-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="js/scripts.js" defer></script>
   </head>
 
   <body>
-    <div id="navigation" class="navigation">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="curriculo.html">Currículo</a></li>
-        <li><a href="contato.html"> Contato</a></li>
-        <li id="threeline-icon" class="threeline-icon" onclick="openNav()">
-          &#9776;
-        </li>
-      </ul>
-    </div>
+    <nav id="navigation" class="navigation">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo"><span class="nav-logo-mark">CM</span>Carlos Miguel</a>
+        <button id="threeline-icon" class="threeline-icon" onclick="openNav()" aria-label="Abrir menu" aria-expanded="false">&#9776;</button>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="index.html#sobre">Sobre</a></li>
+          <li><a href="portfolio.html" class="active">Projetos</a></li>
+          <li><a href="curriculo.html">Currículo</a></li>
+          <li><a href="contato.html" class="nav-cta">Contato</a></li>
+        </ul>
+      </div>
+    </nav>
 
-    <div class="main">
+    <main class="main">
       <ul class="caminho">
-        <li><a href="index.html">Home</a></li>
-        <li>></li>
-        <li>Portfolio</li>
+        <li><a href="index.html">Início</a></li>
+        <li>/</li>
+        <li>Projetos</li>
       </ul>
 
-      <h1>Portfolio</h1>
+      <h1>Projetos</h1>
+      <p class="page-intro">
+        Projetos em que trabalhei nas empresas e projetos pessoais e acadêmicos. Os projetos de empresa estão marcados com o
+        nome dela: são produtos da empresa, e a descrição mostra a minha parte no desenvolvimento.
+      </p>
 
-      <div
-        style="background-image: url('img/carrosaautomal.png')"
-        class="miniatura"
-      >
-        <a target="_blank" href="https://carrosnocape.com/home">
-          <div class="blackbox">
-            <div class="blackbox-text" style="margin-bottom: 80px;">
-              <h1>Carros no Cape</h1>
-              <p>
-                Participei no Desenvolvimento Full Stack de sistema realizado durante tempo na CodeSquare. 
-              </p>
-            </div>
-          </div>
-        </a>
+      <div class="filters">
+        <button class="filter active" data-filter="todos">Todos</button>
+        <button class="filter" data-filter="empresa">Em empresa</button>
+        <button class="filter" data-filter="pessoal">Pessoais e acadêmicos</button>
+        <button class="filter" data-filter="ia">IA</button>
+        <button class="filter" data-filter="backend">Back-end</button>
+        <button class="filter" data-filter="frontend">Front-end</button>
       </div>
 
-      <div
-        style="background-image: url('img/bord-games.png')"
-        class="miniatura"
-      >
-        <a target="_blank" href="https://board-games-with-me-web.vercel.app/">
-          <div class="blackbox">
-            <div class="blackbox-text" style="margin-bottom: 80px;">
-              <h1>CD GameZone</h1>
-              <p>
-                Plataforma com varios jogos online de multiplayer.
-              </p>
-            </div>
+      <div class="projects">
+        <a class="project fade-in" data-tags="empresa ia fullstack" href="https://carrosnocape.com/home" target="_blank" rel="noopener">
+          <div class="project-thumb">
+            <img src="img/carrosaautomal.png" alt="Carros Auto Mall" loading="lazy" />
+            <span class="project-badge badge-company">Code Square</span>
+          </div>
+          <div class="project-body">
+            <h3>ERP e CRM da Carros Auto Mall</h3>
+            <p class="project-owner">Projeto da Code Square para o cliente Carros Auto Mall</p>
+            <p>Atuei no desenvolvimento do ERP automotivo e na integração do CRM com atendimento via WhatsApp, incluindo LangChain para apoio de IA e análise de relatórios.</p>
+            <div class="chips"><span class="chip">Spring Boot</span><span class="chip">Angular</span><span class="chip">LangChain</span></div>
+            <span class="project-link">Ver site do cliente →</span>
+          </div>
+        </a>
+
+        <a class="project fade-in" data-tags="empresa fullstack" href="https://app.homeet.work" target="_blank" rel="noopener">
+          <div class="project-thumb">
+            <div class="project-thumb-placeholder">Homeet</div>
+            <span class="project-badge badge-company">Code Square</span>
+          </div>
+          <div class="project-body">
+            <h3>Homeet CRM</h3>
+            <p class="project-owner">Projeto da Code Square · em desenvolvimento</p>
+            <p>Atuo no desenvolvimento do módulo de CRM da plataforma Homeet: clientes e leads, funil comercial e tarefas em Kanban.</p>
+            <div class="chips"><span class="chip">CRM</span><span class="chip">Funil comercial</span><span class="chip">Kanban</span></div>
+            <span class="project-link">Ver plataforma →</span>
+          </div>
+        </a>
+
+        <a class="project fade-in" data-tags="pessoal fullstack" href="https://inventario-paroquial-web.vercel.app/" target="_blank" rel="noopener">
+          <div class="project-thumb">
+            <img src="img/siec.png" alt="CLAVIS" loading="lazy" />
+            <span class="project-badge">Projeto pessoal</span>
+          </div>
+          <div class="project-body">
+            <h3>CLAVIS</h3>
+            <p class="project-owner">Inventário do patrimônio de paróquias</p>
+            <p>Cadastro de bens com fotos e documentos, importação de NF-e, QR Code por bem, álbum em PDF e vários usuários com permissões por papel.</p>
+            <div class="chips"><span class="chip">Full Stack</span><span class="chip">NF-e</span><span class="chip">QR Code</span></div>
+            <span class="project-link">Ver projeto →</span>
+          </div>
+        </a>
+
+        <a class="project fade-in" data-tags="pessoal ia" href="https://cm-lab-ai.vercel.app/" target="_blank" rel="noopener">
+          <div class="project-thumb">
+            <img src="img/logo-cm-labai.png" alt="CM LabAI" loading="lazy" />
+            <span class="project-badge">Projeto pessoal</span>
+          </div>
+          <div class="project-body">
+            <h3>CM LabAI</h3>
+            <p class="project-owner">Ferramentas de IA generativa</p>
+            <p>Criação de textos, transcrição de áudio e geração de conteúdo usando modelos de linguagem.</p>
+            <div class="chips"><span class="chip">IA generativa</span><span class="chip">LLMs</span></div>
+            <span class="project-link">Ver projeto →</span>
+          </div>
+        </a>
+
+        <a class="project fade-in" data-tags="pessoal backend" href="https://terra-manager-708609690880.europe-west1.run.app/api-docs/" target="_blank" rel="noopener">
+          <div class="project-thumb">
+            <img src="img/api-terra-manager.png" alt="API Terra Manager" loading="lazy" />
+            <span class="project-badge">Pesquisa IFNMG</span>
+          </div>
+          <div class="project-body">
+            <h3>API Terra Manager</h3>
+            <p>API de gestão e planejamento agrícola, criada em projeto de pesquisa no IFNMG, com documentação interativa.</p>
+            <div class="chips"><span class="chip">API REST</span><span class="chip">Swagger</span></div>
+            <span class="project-link">Ver documentação →</span>
+          </div>
+        </a>
+
+        <a class="project fade-in" data-tags="pessoal frontend" href="https://board-games-with-me-web.vercel.app/" target="_blank" rel="noopener">
+          <div class="project-thumb">
+            <img src="img/bord-games.png" alt="CD GameZone" loading="lazy" />
+            <span class="project-badge">Projeto pessoal</span>
+          </div>
+          <div class="project-body">
+            <h3>CD GameZone</h3>
+            <p>Plataforma com vários jogos online multiplayer para jogar com amigos direto no navegador.</p>
+            <div class="chips"><span class="chip">Multiplayer</span><span class="chip">Jogos online</span></div>
+            <span class="project-link">Ver projeto →</span>
+          </div>
+        </a>
+
+        <a class="project fade-in" data-tags="pessoal frontend" href="https://cpu-scheduler-front.vercel.app/pt/dashboard" target="_blank" rel="noopener">
+          <div class="project-thumb">
+            <img src="img/cpu_scheduler.png" alt="CPU Scheduler" loading="lazy" />
+            <span class="project-badge">Projeto pessoal</span>
+          </div>
+          <div class="project-body">
+            <h3>CPU Scheduler</h3>
+            <p>Simulador visual de algoritmos de escalonamento de processos, com dashboard interativo.</p>
+            <div class="chips"><span class="chip">Sistemas Operacionais</span><span class="chip">Dashboard</span></div>
+            <span class="project-link">Ver projeto →</span>
+          </div>
+        </a>
+
+        <a class="project fade-in" data-tags="pessoal backend" href="https://capi-zip.vercel.app/" target="_blank" rel="noopener">
+          <div class="project-thumb">
+            <img src="img/cap-zip-capa.png" alt="Encurtador de links" loading="lazy" />
+            <span class="project-badge">IFNMG</span>
+          </div>
+          <div class="project-body">
+            <h3>Encurtador de links com rastreamento</h3>
+            <p>Gera URLs curtas e mostra métricas de cada clique: IP, cidade, data, hora e cliques por período do dia.</p>
+            <div class="chips"><span class="chip">API</span><span class="chip">Analytics</span></div>
+            <span class="project-link">Ver projeto →</span>
+          </div>
+        </a>
+
+        <a class="project fade-in" data-tags="pessoal fullstack" href="https://service-provided.netlify.app" target="_blank" rel="noopener">
+          <div class="project-thumb">
+            <img src="img/servide-provided.png" alt="Serviços Prestados" loading="lazy" />
+            <span class="project-badge">Projeto pessoal</span>
+          </div>
+          <div class="project-body">
+            <h3>Serviços Prestados</h3>
+            <p>Sistema de cadastro e controle de serviços prestados, do back-end à interface.</p>
+            <div class="chips"><span class="chip">Spring Boot</span><span class="chip">Angular</span></div>
+            <span class="project-link">Ver projeto →</span>
+          </div>
+        </a>
+
+        <a class="project fade-in" data-tags="pessoal frontend" href="https://karmiguel.github.io/Cardapio-Online/" target="_blank" rel="noopener">
+          <div class="project-thumb">
+            <img src="img/restaurante.jpg" alt="Cardápio Online" loading="lazy" />
+            <span class="project-badge">IFNMG</span>
+          </div>
+          <div class="project-body">
+            <h3>Cardápio Online</h3>
+            <p>O cliente escolhe os produtos, monta o carrinho e envia o pedido direto pelo WhatsApp.</p>
+            <div class="chips"><span class="chip">JavaScript</span><span class="chip">jQuery</span></div>
+            <span class="project-link">Ver projeto →</span>
+          </div>
+        </a>
+
+        <a class="project fade-in" data-tags="pessoal frontend" href="https://buzz-feed.netlify.app/" target="_blank" rel="noopener">
+          <div class="project-thumb">
+            <img src="img/buzz.avif" alt="Quiz" loading="lazy" />
+            <span class="project-badge">Projeto pessoal</span>
+          </div>
+          <div class="project-body">
+            <h3>Quiz: herói ou vilão?</h3>
+            <p>Quiz interativo no estilo BuzzFeed que descobre se você é herói ou vilão.</p>
+            <div class="chips"><span class="chip">JavaScript</span></div>
+            <span class="project-link">Ver projeto →</span>
+          </div>
+        </a>
+
+        <a class="project fade-in" data-tags="pessoal frontend" href="https://karmiguel.github.io/Land_Page_Atletico-MG/" target="_blank" rel="noopener">
+          <div class="project-thumb">
+            <img src="img/banner.png" alt="Landing page Atlético Mineiro" loading="lazy" />
+            <span class="project-badge">Projeto pessoal</span>
+          </div>
+          <div class="project-body">
+            <h3>Notícias do Atlético Mineiro</h3>
+            <p>Landing page de notícias com carrossel de destaques.</p>
+            <div class="chips"><span class="chip">HTML/CSS</span><span class="chip">Owl Carousel</span></div>
+            <span class="project-link">Ver projeto →</span>
+          </div>
+        </a>
+
+        <a class="project fade-in" data-tags="pessoal frontend" href="https://karmiguel.github.io/Cronometro-Partida-Futebol/" target="_blank" rel="noopener">
+          <div class="project-thumb">
+            <img src="img/cronometro-partida.png" alt="Cronômetro e placar" loading="lazy" />
+            <span class="project-badge">Projeto pessoal</span>
+          </div>
+          <div class="project-body">
+            <h3>Cronômetro e placar</h3>
+            <p>Cronômetro e placar para acompanhar partidas de futebol.</p>
+            <div class="chips"><span class="chip">JavaScript</span></div>
+            <span class="project-link">Ver projeto →</span>
+          </div>
+        </a>
+
+        <a class="project fade-in" data-tags="pessoal frontend" href="https://karmiguel.github.io/Cadastro-Evento/" target="_blank" rel="noopener">
+          <div class="project-thumb">
+            <img src="img/monitoria.jpg" alt="Monitoria de Algoritmos" loading="lazy" />
+            <span class="project-badge">Acadêmico</span>
+          </div>
+          <div class="project-body">
+            <h3>Monitoria de Algoritmos</h3>
+            <p>Formulário de inscrição para a monitoria de algoritmos.</p>
+            <div class="chips"><span class="chip">HTML/CSS</span><span class="chip">JavaScript</span></div>
+            <span class="project-link">Ver projeto →</span>
+          </div>
+        </a>
+
+        <a class="project fade-in" data-tags="pessoal frontend" href="https://karmiguel.github.io/Lista-Tarefas/" target="_blank" rel="noopener">
+          <div class="project-thumb">
+            <img src="img/tarefas.jpg" alt="Lista de tarefas" loading="lazy" />
+            <span class="project-badge">Projeto pessoal</span>
+          </div>
+          <div class="project-body">
+            <h3>Lista de tarefas</h3>
+            <p>Controle simples de tarefas do dia a dia.</p>
+            <div class="chips"><span class="chip">JavaScript</span></div>
+            <span class="project-link">Ver projeto →</span>
+          </div>
+        </a>
+
+        <a class="project fade-in" data-tags="pessoal frontend" href="https://karmiguel.github.io/Replica-site-G1/" target="_blank" rel="noopener">
+          <div class="project-thumb">
+            <img src="img/ccb3.jpg" alt="Princípios éticos na TI" loading="lazy" />
+            <span class="project-badge">Acadêmico</span>
+          </div>
+          <div class="project-body">
+            <h3>Princípios éticos na TI</h3>
+            <p>Trabalho acadêmico publicado como réplica do layout do G1.</p>
+            <div class="chips"><span class="chip">HTML/CSS</span></div>
+            <span class="project-link">Ver projeto →</span>
+          </div>
+        </a>
+
+        <a class="project fade-in" data-tags="pessoal backend" href="https://github.com/KarMiguel?tab=repositories" target="_blank" rel="noopener">
+          <div class="project-thumb">
+            <div class="project-thumb-placeholder">GitHub</div>
+            <span class="project-badge">GitHub</span>
+          </div>
+          <div class="project-body">
+            <h3>Repositórios no GitHub</h3>
+            <p>Projetos de back-end, APIs e estudos com código aberto.</p>
+            <div class="chips"><span class="chip">Java</span><span class="chip">Spring Boot</span><span class="chip">Node.js</span></div>
+            <span class="project-link">Ver no GitHub →</span>
           </div>
         </a>
       </div>
 
-      <div
-        style="background-image: url('img/restaurante.jpg')"
-        class="miniatura"
-      >
-        <a target="_blank" href="https://karmiguel.github.io/Cardapio-Online/">
-          <div class="blackbox">
-            <div class="blackbox-text">
-              <h1>Restaurante</h1>
-              <h2>Cardapio Online</h2>
-            </div>
-          </div>
-        </a>
-      </div>
+      <a class="back-link" href="index.html">← Voltar ao início</a>
+    </main>
 
-      
-  <div
-    style="background-image: url('img/siec.png')"
-    class="miniatura"
-  >
-    <a target="_blank" href="https://inventario-paroquial-web.vercel.app/">
-      <div class="blackbox">
-        <div class="blackbox-text">
-          <h1 style="font-size: 16px;">SIEC - Sistema de Inventário Eclesiástico</h1>
-          <h2>Gestão profissional do inventário paroquial</h2>
-        </div>
+    <footer class="footer">
+      <div class="container">
+        <span>© <span data-ano>2026</span> Carlos Miguel dos Santos Alves</span>
+        <span>Feito com HTML, CSS e JavaScript</span>
       </div>
-    </a>
-  </div>
-  
-  
-    <div
-      style="background-image: url('img/cpu_scheduler.png')"
-      class="miniatura"
-    >
-      <a target="_blank" href="https://cpu-scheduler-front.vercel.app/pt/dashboard">
-        <div class="blackbox">
-          <div class="blackbox-text">
-            <h1>CPU Scheduler</h1>
-            <h2>Simulador de algoritmos de escalonamento</h2>
-          </div>
-        </div>
-      </a>
-    </div>
-    
-    
-  <div
-    style="background-image: url('img/api-terra-manager.png')"
-    class="miniatura"
-    >
-      <a target="_blank" href="https://terra-manager-708609690880.europe-west1.run.app/api-docs/">
-        <div class="blackbox">
-          <div class="blackbox-text">
-            <h1>API Terra Manager</h1>
-            <h2>API de sistema de gestão e planejamento agrícola</h2>
-          </div>
-        </div>
-      </a>
-    </div>
+    </footer>
 
-
-  <div
-      style="background-image: url('img/logo-cm-labai.png')"
-      class="miniatura"
-    >
-      <a target="_blank" href="https://cm-lab-ai.vercel.app/">
-        <div class="blackbox">
-          <div class="blackbox-text" style="margin-bottom: 80px;">
-            <h1>CM LabAI</h1>
-            <p>
-              Criação texto, transcrição audio e geração de conteúdo(CM LabAI).
-            </p>
-          </div>
-        </div>
-      </a>
-    </div>
-    
-      <div style="background-image: url('img/buzz.avif')" class="miniatura">
-        <a target="_blank" href="https://buzz-feed.netlify.app/">
-          <div class="blackbox">
-            <div class="blackbox-text">
-              <h1>QUIZZ</h1>
-              <h2>Super Heroi ou Vilão?</h2>
-            </div>
-          </div>
-        </a>
-      </div>
-
-      <div style="background-image: url('img/banner.png')" class="miniatura">
-        <a
-          target="_blank"
-          href="https://karmiguel.github.io/Land_Page_Atletico-MG/"
-        >
-          <div class="blackbox">
-            <div class="blackbox-text">
-              <h1>Notícias Atlético Mineiro</h1>
-              <h2>Land Page e owlCarousel</h2>
-            </div>
-          </div>
-        </a>
-      </div>
-
-      <div
-        style="background-image: url('img/cap-zip-capa.png')"
-        class="miniatura"
-      >
-        <a target="_blank" href="https://capi-zip.vercel.app/">
-          <div class="blackbox">
-            <div class="blackbox-text" style="margin-bottom: 20px;">
-              <h1>
-                Encurtador de Links
-              </h1>
-              <h2>Encurtador de Links com rastreamento</h2>
-            </div>
-          </div>
-        </a>
-      </div>
-
-
-      <div
-        style="background-image: url('img/servide-provided.png')"
-        class="miniatura"
-      >
-        <a target="_blank" href="https://service-provided.netlify.app">
-          <div class="blackbox">
-            <div class="blackbox-text">
-              <h1>Serviços Prestados</h1>
-              <h2>Desenvolvimento Full Stack Spring e Angular</h2>
-            </div>
-          </div>
-        </a>
-      </div>
-
-      <!-- <div style="background-image: url('img/cliente.jpg')" class="miniatura">
-        <a target="_blank" href="http://crud-cliente.000webhostapp.com/">
-          <div class="blackbox">
-            <div class="blackbox-text">
-              <h1>Cadastro Cliente</h1>
-              <h2>CRUD</h2>
-            </div>
-          </div>
-        </a>
-      </div>
-             -->
-      <div
-        style="background-image: url('img/image-portifolio.png')"
-        class="miniatura"
-      >
-        <a
-          target="_blank"
-          href="https://karmiguel.github.io/Portifolio/"
-        >
-          <div class="blackbox">
-            <div class="blackbox-text">
-              <h1>Portfolio</h1>
-              <h2>Portfolio Online Carlos Miguel</h2>
-            </div>
-          </div>
-        </a>
-      </div>
-      
-      
-      <div
-        style="background-image: url('img/cronometro-partida.png')"
-        class="miniatura"
-      >
-        <a
-          target="_blank"
-          href="https://karmiguel.github.io/Cronometro-Partida-Futebol/"
-        >
-          <div class="blackbox">
-            <div class="blackbox-text">
-              <h1>Cronômetro e Placar</h1>
-              <h2>Partida de Futebol</h2>
-            </div>
-          </div>
-        </a>
-      </div>
-      <div style="background-image: url('img/monitoria.jpg')" class="miniatura">
-        <a target="_blank" href="https://karmiguel.github.io/Cadastro-Evento/">
-          <div class="blackbox">
-            <div class="blackbox-text">
-              <h1>Monitoria de Algoritmo</h1>
-              <h2>Cadastro para Monitoria</h2>
-            </div>
-          </div>
-        </a>
-      </div>
-      <div style="background-image: url('img/tarefas.jpg')" class="miniatura">
-        <a target="_blank" href="https://karmiguel.github.io/Lista-Tarefas/">
-          <div class="blackbox">
-            <div class="blackbox-text">
-              <h1>Lista de Tarefas</h1>
-              <h2>Controle de Tarefas</h2>
-            </div>
-          </div>
-        </a>
-      </div>
-      <div style="background-image: url('img/ccb3.jpg')" class="miniatura">
-        <a target="_blank" href="https://karmiguel.github.io/Replica-site-G1/">
-          <div class="blackbox">
-            <div class="blackbox-text">
-              <h1>Princípios éticos na TI</h1>
-              <h2>Réplica site G1</h2>
-            </div>
-          </div>
-        </a>
-      </div>
-      <div style="background-image: url('img/git.jpg')" class="miniatura">
-        <a target="_blank" href="https://github.com/KarMiguel?tab=repositories">
-          <div class="blackbox">
-            <div class="blackbox-text">
-              <h1>Projetos Back-End</h1>
-              <h2>Repositorio GitHub</h2>
-            </div>
-          </div>
-        </a>
-      </div>
-      <br /><br /><br />
-      <a class="back-link" href="index.html">&larr;Voltar ao início</a>
-    </div>
-
-    <a href="#" class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">↑</a>
+    <a href="#" class="back-to-top" aria-label="Voltar ao topo" onclick="window.scrollTo({ top: 0, behavior: 'smooth' }); return false;">↑</a>
   </body>
 </html>

@@ -1,162 +1,153 @@
 <!DOCTYPE html>
-
 <html lang="pt-BR">
-
 	<head>
-		<title>Contato - Carlos Miguel</title>
-		<link rel="icon" href="img/eu-perfil.png" type="image/png">
 		<meta charset="utf-8">
-		<link rel="stylesheet" href="css/styles.css">
-		<link href="https://fonts.googleapis.com/css?family=Montserrat:100,400" rel="stylesheet">
-		<script type="text/javascript" src="js/scripts.js"></script>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+		<title>Contato | Carlos Miguel</title>
+		<meta name="description" content="Entre em contato com Carlos Miguel, Desenvolvedor Full Stack e IA aplicada.">
+		<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicon-180.png">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="css/styles.css">
+		<script src="js/scripts.js" defer></script>
 	</head>
 
-
 	<body>
-		<div id="navigation" class="navigation">
+		<nav id="navigation" class="navigation">
+			<div class="nav-inner">
+				<a href="index.html" class="nav-logo"><span class="nav-logo-mark">CM</span>Carlos Miguel</a>
+				<button id="threeline-icon" class="threeline-icon" onclick="openNav()" aria-label="Abrir menu" aria-expanded="false">&#9776;</button>
 				<ul>
-					<li><a href="index.html">Home</a></li>
-					<li><a href="portfolio.html">Portfolio</a></li>
+					<li><a href="index.html">Início</a></li>
+					<li><a href="index.html#sobre">Sobre</a></li>
+					<li><a href="portfolio.html">Projetos</a></li>
 					<li><a href="curriculo.html">Currículo</a></li>
-					<li><a href="contato.html"> Contato</a></li>
-					<li id="threeline-icon" class="threeline-icon" onclick="openNav()">&#9776;</li>
+					<li><a href="contato.html" class="nav-cta">Contato</a></li>
 				</ul>
 			</div>
+		</nav>
 
+		<main class="main">
+			<ul class="caminho">
+				<li><a href="index.html">Início</a></li>
+				<li>/</li>
+				<li>Contato</li>
+			</ul>
 
-			<div class="main">
-				<ul class="caminho">
-					<li><a href="index.html">Home</a></li>
-					<li>></li>
-					<li>Contato</li>
-				</ul>
+			<h1>Contato</h1>
+			<p class="page-intro">Para propostas, oportunidades ou dúvidas sobre algum projeto, use o canal que preferir.</p>
 
-				<h1>Contato</h1>
-
-				<div class="cv-section cv-section-contato fade-in">
-					<div class="cv-section-header">
-						<h2>Entre em Contato</h2><hr>
-					</div>
-					<div class="cv-section-body">
-						<p class="contato-intro">Estou aberto a novas oportunidades e projetos. Sinta-se à vontade para entrar em contato!</p>
-						<div class="cv-blocks cv-blocks-contato">
-							<div class="cv-block cv-block-dado">
-								<span class="cv-label">E-mail</span>
-								<span class="cv-value">
-									<a href="mailto:carlosmiguel.dsa12@gmail.com">carlosmiguel.dsa12@gmail.com</a><br>
-									<a href="mailto:carlosmiguel.sa@hotmail.com">carlosmiguel.sa@hotmail.com</a>
-								</span>
-							</div>
-							<div class="cv-block cv-block-dado">
-								<span class="cv-label">Telefone</span>
-								<span class="cv-value">
-									<a href="tel:+5538999661117">(38) 99966-1117</a> · <a href="tel:+5538998691834">(38) 99869-1834</a>
-								</span>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="cv-section cv-section-contato fade-in">
-					<div class="cv-section-header">
-						<h2>Redes Sociais</h2><hr>
-					</div>
-					<div class="cv-section-body">
-						<p class="contato-intro">Conecte-se comigo:</p>
-						<div class="social-links">
-							<a href="https://www.instagram.com/krmiguel_360/" target="_blank" rel="noopener" title="Instagram" class="social-link">
-								<img class="social-img" src="img/instagram.png" alt="Instagram">
-							</a>
-							<a href="https://www.linkedin.com/in/carlos-miguel-dos-santos-alves/" target="_blank" rel="noopener" title="LinkedIn" class="social-link">
-								<img class="social-img" src="img/linkedin.com.png" alt="LinkedIn">
-							</a>
-							<a href="https://github.com/KarMiguel" target="_blank" rel="noopener" title="GitHub" class="social-link">
-								<img class="social-img" src="img/git.jpg" alt="GitHub">
-							</a>
-						</div>
-					</div>
-				</div>
-
-				<div class="cv-section cv-section-cnpj fade-in">
-					<div class="cv-section-header cv-section-header-cnpj">
-						<h2>Dados da Empresa</h2>
-						<span class="cnpj-badge cnpj-badge-ativa" title="Empresa em situação regular">Ativa</span>
-						<hr>
-					</div>
-					<div class="cv-section-body">
-						<p class="contato-intro">Informações de registro para contratos e emissão de notas. CNPJ regular perante a Receita Federal.</p>
-						<div class="cnpj-grid">
-							<div class="cnpj-card cnpj-card-destaque">
-								<span class="cv-label">Razão Social</span>
-								<span class="cv-value">55.900.424 Carlos Miguel dos Santos Alves</span>
-							</div>
-							<div class="cnpj-card">
-								<span class="cv-label">CNPJ</span>
-								<span class="cv-value">55.900.424/0001-02</span>
-								<span class="cv-desc">55900424000102</span>
-							</div>
-							<div class="cnpj-card">
-								<span class="cv-label">Inscrição Estadual (MG)</span>
-								<span class="cv-value">004941022.00-25</span>
-							</div>
-							<div class="cnpj-card">
-								<span class="cv-label">Porte</span>
-								<span class="cv-value">Microempreendedor Individual (MEI)</span>
-							</div>
-							<div class="cnpj-card">
-								<span class="cv-label">Natureza Jurídica</span>
-								<span class="cv-value">Empresário (Individual)</span>
-							</div>
-							<div class="cnpj-card">
-								<span class="cv-label">Data da Abertura</span>
-								<span class="cv-value">11/07/2024</span>
-								<span class="cv-desc" id="cnpj-tempo-abertura">—</span>
-							</div>
-							<div class="cnpj-card">
-								<span class="cv-label">Situação Cadastral</span>
-								<span class="cv-value">Ativa</span>
-								<span class="cv-desc">Desde 11/07/2024</span>
-							</div>
-							<div class="cnpj-card">
-								<span class="cv-label">Tipo</span>
-								<span class="cv-value">Matriz</span>
-							</div>
-							<div class="cnpj-card">
-								<span class="cv-label">Simples Nacional</span>
-								<span class="cv-value">Optante</span>
-								<span class="cv-desc">Desde 11/07/2024</span>
-							</div>
-						</div>
-					</div>
-				</div>
-				
-				<br><br>
-				<a class="back-link" href="index.html">&larr;Voltar ao início</a>
+			<div class="contact-grid">
+				<a class="contact-card fade-in" href="mailto:carlosmiguel.dsa12@gmail.com">
+					<small>E-mail</small>
+					<strong>carlosmiguel.dsa12@gmail.com</strong>
+				</a>
+				<a class="contact-card fade-in" href="https://www.linkedin.com/in/carlos-miguel-dos-santos-alves/" target="_blank" rel="noopener">
+					<small>LinkedIn</small>
+					<strong>carlos-miguel-dos-santos-alves</strong>
+				</a>
+				<a class="contact-card fade-in" href="https://github.com/KarMiguel" target="_blank" rel="noopener">
+					<small>GitHub</small>
+					<strong>KarMiguel</strong>
+				</a>
+				<a class="contact-card fade-in" href="tel:+5538999661117">
+					<small>Telefone</small>
+					<strong>(38) 99966-1117</strong>
+				</a>
+				<a class="contact-card fade-in" href="mailto:carlosmiguel.sa@hotmail.com">
+					<small>E-mail alternativo</small>
+					<strong>carlosmiguel.sa@hotmail.com</strong>
+				</a>
+				<a class="contact-card fade-in" href="https://www.instagram.com/krmiguel_360/" target="_blank" rel="noopener">
+					<small>Instagram</small>
+					<strong>@krmiguel_360</strong>
+				</a>
 			</div>
 
-			<a href="#" class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">↑</a>
+			<div class="cv-section cv-section-cnpj fade-in">
+				<div class="cv-section-header cv-section-header-cnpj">
+					<h2>Dados da empresa</h2>
+					<span class="cnpj-badge cnpj-badge-ativa" title="Empresa em situação regular">Ativa</span>
+					<hr>
+				</div>
+				<div class="cv-section-body">
+					<p class="contato-intro">Informações de registro para contratos e emissão de notas. CNPJ regular perante a Receita Federal.</p>
+					<div class="cnpj-grid">
+						<div class="cnpj-card cnpj-card-destaque">
+							<span class="cv-label">Razão Social</span>
+							<span class="cv-value">55.900.424 Carlos Miguel dos Santos Alves</span>
+						</div>
+						<div class="cnpj-card">
+							<span class="cv-label">CNPJ</span>
+							<span class="cv-value">55.900.424/0001-02</span>
+							<span class="cv-desc">55900424000102</span>
+						</div>
+						<div class="cnpj-card">
+							<span class="cv-label">Inscrição Estadual (MG)</span>
+							<span class="cv-value">004941022.00-25</span>
+						</div>
+						<div class="cnpj-card">
+							<span class="cv-label">Porte</span>
+							<span class="cv-value">Microempreendedor Individual (MEI)</span>
+						</div>
+						<div class="cnpj-card">
+							<span class="cv-label">Natureza Jurídica</span>
+							<span class="cv-value">Empresário (Individual)</span>
+						</div>
+						<div class="cnpj-card">
+							<span class="cv-label">Data da Abertura</span>
+							<span class="cv-value">11/07/2024</span>
+							<span class="cv-desc" id="cnpj-tempo-abertura">—</span>
+						</div>
+						<div class="cnpj-card">
+							<span class="cv-label">Situação Cadastral</span>
+							<span class="cv-value">Ativa</span>
+							<span class="cv-desc">Desde 11/07/2024</span>
+						</div>
+						<div class="cnpj-card">
+							<span class="cv-label">Tipo</span>
+							<span class="cv-value">Matriz</span>
+						</div>
+						<div class="cnpj-card">
+							<span class="cv-label">Simples Nacional</span>
+							<span class="cv-value">Optante</span>
+							<span class="cv-desc">Desde 11/07/2024</span>
+						</div>
+					</div>
+				</div>
+			</div>
 
-			<script>
-			(function() {
-				var abertura = new Date(2024, 6, 11);
-				var hoje = new Date();
-				var anos = hoje.getFullYear() - abertura.getFullYear();
-				var meses = hoje.getMonth() - abertura.getMonth();
-				var dias = hoje.getDate() - abertura.getDate();
-				if (dias < 0) { meses--; dias += new Date(hoje.getFullYear(), hoje.getMonth(), 0).getDate(); }
-				if (meses < 0) { anos--; meses += 12; }
-				var partes = [];
-				if (anos > 0) partes.push(anos + (anos === 1 ? ' ano' : ' anos'));
-				if (meses > 0) partes.push(meses + (meses === 1 ? ' mês' : ' meses'));
-				if (dias > 0) partes.push(dias + (dias === 1 ? ' dia' : ' dias'));
-				var texto = partes.length ? partes.join(', ').replace(/, ([^,]+)$/, ' e $1') : '0 dias';
-				var el = document.getElementById('cnpj-tempo-abertura');
-				if (el) el.textContent = texto;
-			})();
-			</script>
+			<a class="back-link" href="index.html">← Voltar ao início</a>
+		</main>
 
+		<footer class="footer">
+			<div class="container">
+				<span>© <span data-ano>2026</span> Carlos Miguel dos Santos Alves</span>
+				<span>Feito com HTML, CSS e JavaScript</span>
+			</div>
+		</footer>
+
+		<a href="#" class="back-to-top" aria-label="Voltar ao topo" onclick="window.scrollTo({ top: 0, behavior: 'smooth' }); return false;">↑</a>
+
+		<script>
+		(function() {
+			var abertura = new Date(2024, 6, 11);
+			var hoje = new Date();
+			var anos = hoje.getFullYear() - abertura.getFullYear();
+			var meses = hoje.getMonth() - abertura.getMonth();
+			var dias = hoje.getDate() - abertura.getDate();
+			if (dias < 0) { meses--; dias += new Date(hoje.getFullYear(), hoje.getMonth(), 0).getDate(); }
+			if (meses < 0) { anos--; meses += 12; }
+			var partes = [];
+			if (anos > 0) partes.push(anos + (anos === 1 ? ' ano' : ' anos'));
+			if (meses > 0) partes.push(meses + (meses === 1 ? ' mês' : ' meses'));
+			if (dias > 0) partes.push(dias + (dias === 1 ? ' dia' : ' dias'));
+			var texto = partes.length ? partes.join(', ').replace(/, ([^,]+)$/, ' e $1') : '0 dias';
+			var el = document.getElementById('cnpj-tempo-abertura');
+			if (el) el.textContent = texto;
+		})();
+		</script>
 	</body>
-
 </html>

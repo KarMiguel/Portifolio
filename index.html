@@ -1,62 +1,291 @@
 <!DOCTYPE html>
-
 <html lang="pt-BR">
-
   <head>
-    <title>Carlos Miguel- Portfolio Online</title>
-    <link rel="icon" href="img/eu-perfil.png" type="image/png" />
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="css/styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carlos Miguel | Desenvolvedor Full Stack</title>
+    <meta
+      name="description"
+      content="Carlos Miguel, Desenvolvedor Full Stack. Java (Spring Boot), Node.js (NestJS), React, Next.js, Angular e integração de IA em sistemas com LangChain, LangGraph, MCP e RAG."
+    />
+    <meta property="og:title" content="Carlos Miguel | Desenvolvedor Full Stack" />
+    <meta
+      property="og:description"
+      content="Sistemas web de ponta a ponta com Java, Node.js, React e Angular, e IA integrada aos sistemas."
+    />
+    <meta property="og:image" content="img/eu-perfil.png" />
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="img/favicon-180.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css?family=Montserrat:100,400"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <script type="text/javascript" src="js/scripts.js"></script>
-    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="js/scripts.js" defer></script>
   </head>
 
   <body>
-    <div id="navigation" class="navigation">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="curriculo.html">Currículo</a></li>
-        <li><a href="contato.html"> Contato</a></li>
-        <li id="threeline-icon" class="threeline-icon" onclick="openNav()">
-          &#9776;
-        </li>
-      </ul>
-    </div>
-
-    <div class="capa">
-      <div class="profile-pic">
-        <img src="img/eu-perfil.png" alt="Foto de Carlos Miguel" />
+    <nav id="navigation" class="navigation">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo"><span class="nav-logo-mark">CM</span>Carlos Miguel</a>
+        <button id="threeline-icon" class="threeline-icon" onclick="openNav()" aria-label="Abrir menu" aria-expanded="false">&#9776;</button>
+        <ul>
+          <li><a href="index.html" class="active">Início</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="portfolio.html">Projetos</a></li>
+          <li><a href="curriculo.html">Currículo</a></li>
+          <li><a href="contato.html" class="nav-cta">Contato</a></li>
+        </ul>
       </div>
-      <div class="profile-title">
-        <h1>Carlos Miguel <span>dos Santos Alves</span></h1>
-        <h2>
-          Desenvolvedor de Software Full Stack - Java (Spring Boot) | Nest.js | React (NextJS) | Angular
-        </h2>
-        <div class="profile-buttons">
-          <a href="portfolio.html" class="download-btn">Ver Portfólio</a>
-          <a href="curriculo.html" class="download-btn">Ver Currículo</a>
+    </nav>
+
+    <header class="hero">
+      <div class="container hero-grid">
+        <div>
+          <p class="hero-kicker">Desenvolvedor Full Stack · Minas Gerais, Brasil</p>
+          <h1>Carlos Miguel</h1>
+          <p class="hero-role">
+            Desenvolvo sistemas web de ponta a ponta com Java, Node.js, React e Angular, e integro IA aos sistemas com
+            LangChain, LangGraph, MCP e RAG.
+          </p>
+          <p class="hero-pitch">
+            Hoje trabalho na Code Square com CRMs, integrações e automações. Formado em Sistemas de Informação (2026).
+          </p>
+          <div class="hero-actions">
+            <a href="portfolio.html" class="btn btn-primary">Ver projetos</a>
+            <a href="curriculo_carlos_miguel_dos_santos_alves_2026.pdf" class="btn btn-ghost" download>
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14" /></svg>
+              Baixar currículo (PDF)
+            </a>
+          </div>
+          <div class="hero-social">
+            <a class="social-icon" href="https://www.linkedin.com/in/carlos-miguel-dos-santos-alves/" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z" /></svg>
+            </a>
+            <a class="social-icon" href="https://github.com/KarMiguel" target="_blank" rel="noopener" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.4-4-1.4-.6-1.4-1.4-1.8-1.4-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.7 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3" /></svg>
+            </a>
+            <a class="social-icon" href="mailto:carlosmiguel.dsa12@gmail.com" aria-label="E-mail">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2" /><path d="m3 7 9 6 9-6" /></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-photo">
+          <img src="img/eu-perfil.png" alt="Foto de Carlos Miguel" />
         </div>
       </div>
-    </div>
+    </header>
 
-    <div class="main fade-in home-about">
-      <h2>Sobre Mim</h2>
-      <p>
-        Sou Desenvolvedor Full Stack com sólida experiência no desenvolvimento de aplicações web modernas e APIs robustas, escaláveis e testáveis. Atuo principalmente com <strong>Java (Spring Boot)</strong> e <strong>Node.js (NestJS)</strong> no back-end, além do desenvolvimento de interfaces dinâmicas e responsivas utilizando <strong>TypeScript</strong>, <strong>Angular</strong>, <strong>React</strong> e <strong>Next.js</strong>.
-      </p>
-      <p>
-        Possuo forte atuação em modelagem, otimização e consultas avançadas em bancos de dados relacionais, bem como experiência em integração entre sistemas, automação de processos e aplicação de boas práticas de arquitetura e qualidade de código.
-      </p>
-      <p>
-        Tenho vivência em metodologias ágeis, colaborando em times multidisciplinares, participando de sprints, utilizando <strong>Git</strong>, pipelines de <strong>CI/CD</strong> e práticas de versionamento e testes. Atualmente curso o 8º período de Sistemas de Informação e mantenho foco contínuo em aprimoramento técnico, buscando atualização constante em novas tecnologias, padrões de projeto e soluções escaláveis orientadas ao negócio.
-      </p>
-    </div>
+    <section id="sobre" class="section">
+      <div class="container about-grid">
+        <div class="about-text fade-in">
+          <h2 class="section-title">Sobre</h2>
+          <p>
+            Sou Desenvolvedor Full Stack há mais de 2 anos. Trabalho desde a modelagem dos dados até a interface: back-end com
+            <strong>Java (Spring Boot)</strong> e <strong>Node.js (NestJS)</strong>, front-end com <strong>React</strong>,
+            <strong>Next.js</strong>, <strong>TanStack</strong> e <strong>Angular</strong>.
+          </p>
+          <p>
+            Nos últimos projetos, passei a integrar IA aos sistemas: uso <strong>LangChain</strong> e <strong>LangGraph</strong>
+            para orquestrar agentes, <strong>tool calling</strong> e <strong>MCP</strong> para a IA executar ações no sistema,
+            <strong>RAG</strong> para responder com dados da empresa e engenharia de prompt para manter as respostas consistentes.
+          </p>
+          <p>
+            No dia a dia, cuido da qualidade do que entrego: código revisado, testes, versionamento com Git e pipelines de CI/CD.
+            Também uso ferramentas de IA no desenvolvimento, como Claude Code e Cursor, para ganhar velocidade sem abrir mão da
+            revisão.
+          </p>
+        </div>
 
-    <a href="#" class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">↑</a>
+        <dl class="facts fade-in">
+          <div><dt>Atualmente</dt><dd>Desenvolvedor Full Stack Pleno na Code Square</dd></div>
+          <div><dt>Formação</dt><dd>Bacharel em Sistemas de Informação (2026)</dd></div>
+          <div><dt>Foco</dt><dd>Back-end, arquitetura de sistemas e integração de IA</dd></div>
+          <div><dt>Modelo de trabalho</dt><dd>Remoto ou híbrido</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container">
+        <h2 class="section-title fade-in">O que eu faço</h2>
+        <div class="services">
+          <div class="service fade-in">
+            <h3>Back-end e APIs</h3>
+            <p>APIs REST com Spring Boot e NestJS, autenticação, regras de negócio e bancos relacionais.</p>
+          </div>
+          <div class="service fade-in">
+            <h3>Front-end</h3>
+            <p>Interfaces responsivas com React, Next.js, TanStack e Angular, conectadas às APIs.</p>
+          </div>
+          <div class="service fade-in">
+            <h3>Integração de IA</h3>
+            <p>LLMs ligados aos dados do sistema com LangChain, LangGraph, MCP, tool calling e RAG.</p>
+          </div>
+          <div class="service fade-in">
+            <h3>Arquitetura e integrações</h3>
+            <p>Sistemas multitenant, modelagem de dados e integração com APIs externas e de governo.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head-row fade-in">
+          <h2 class="section-title">Projetos</h2>
+          <a href="portfolio.html" class="text-link">Ver todos os projetos →</a>
+        </div>
+
+        <div class="projects projects-featured">
+          <a class="project fade-in" href="https://carrosnocape.com/home" target="_blank" rel="noopener">
+            <div class="project-thumb">
+              <img src="img/carrosaautomal.png" alt="Carros Auto Mall" loading="lazy" />
+              <span class="project-badge badge-company">Code Square</span>
+            </div>
+            <div class="project-body">
+              <h3>ERP e CRM da Carros Auto Mall</h3>
+              <p class="project-owner">Projeto da Code Square para o cliente Carros Auto Mall</p>
+              <p>Atuei no desenvolvimento do ERP automotivo e na integração do CRM com atendimento via WhatsApp, incluindo LangChain para apoio de IA e análise de relatórios.</p>
+              <div class="chips"><span class="chip">Spring Boot</span><span class="chip">Angular</span><span class="chip">LangChain</span></div>
+              <span class="project-link">Ver site do cliente →</span>
+            </div>
+          </a>
+
+          <a class="project fade-in" href="https://app.homeet.work" target="_blank" rel="noopener">
+            <div class="project-thumb">
+              <div class="project-thumb-placeholder">Homeet</div>
+              <span class="project-badge badge-company">Code Square</span>
+            </div>
+            <div class="project-body">
+              <h3>Homeet CRM</h3>
+              <p class="project-owner">Projeto da Code Square · em desenvolvimento</p>
+              <p>Atuo no desenvolvimento do módulo de CRM da plataforma Homeet: clientes e leads, funil comercial e tarefas em Kanban.</p>
+              <div class="chips"><span class="chip">CRM</span><span class="chip">Funil comercial</span><span class="chip">Kanban</span></div>
+              <span class="project-link">Ver plataforma →</span>
+            </div>
+          </a>
+
+          <a class="project fade-in" href="https://inventario-paroquial-web.vercel.app/" target="_blank" rel="noopener">
+            <div class="project-thumb">
+              <img src="img/siec.png" alt="CLAVIS" loading="lazy" />
+              <span class="project-badge">Projeto pessoal</span>
+            </div>
+            <div class="project-body">
+              <h3>CLAVIS</h3>
+              <p class="project-owner">Inventário do patrimônio de paróquias</p>
+              <p>Cadastro de bens com fotos e documentos, importação de NF-e, QR Code por bem, álbum em PDF e vários usuários com permissões por papel.</p>
+              <div class="chips"><span class="chip">Full Stack</span><span class="chip">NF-e</span><span class="chip">QR Code</span></div>
+              <span class="project-link">Ver projeto →</span>
+            </div>
+          </a>
+
+          <a class="project fade-in" href="https://cm-lab-ai.vercel.app/" target="_blank" rel="noopener">
+            <div class="project-thumb">
+              <img src="img/logo-cm-labai.png" alt="CM LabAI" loading="lazy" />
+              <span class="project-badge">Projeto pessoal</span>
+            </div>
+            <div class="project-body">
+              <h3>CM LabAI</h3>
+              <p class="project-owner">Ferramentas de IA generativa</p>
+              <p>Criação de textos, transcrição de áudio e geração de conteúdo usando modelos de linguagem.</p>
+              <div class="chips"><span class="chip">LLMs</span><span class="chip">Transcrição</span></div>
+              <span class="project-link">Ver projeto →</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container">
+        <h2 class="section-title fade-in">Experiência</h2>
+
+        <div class="timeline">
+          <div class="timeline-item current fade-in">
+            <div class="timeline-top"><h3>Desenvolvedor Full Stack Pleno</h3><span class="timeline-date">02/2026 – atual</span></div>
+            <div class="timeline-company">Code Square</div>
+            <p>Integração de CRM com atendimento via WhatsApp e IA (LangChain) para a Carros Auto Mall e desenvolvimento do módulo de CRM do Homeet.</p>
+            <div class="chips"><span class="chip">LangChain</span><span class="chip">NestJS</span><span class="chip">Next.js</span></div>
+          </div>
+          <div class="timeline-item fade-in">
+            <div class="timeline-top"><h3>Desenvolvedor Full Stack</h3><span class="timeline-date">08/2025 – 02/2026</span></div>
+            <div class="timeline-company">RTech Solutions</div>
+            <p>Sistema regulatório multitenant com integração ao Outlook, motor de Nota Fiscal integrado ao ADN/SERPRO com certificado A1 e consulta de contratos públicos.</p>
+            <div class="chips"><span class="chip">Spring Boot</span><span class="chip">Next.js</span><span class="chip">SQL Server</span><span class="chip">PostgreSQL</span></div>
+          </div>
+          <div class="timeline-item fade-in">
+            <div class="timeline-top"><h3>Desenvolvedor de Automação</h3><span class="timeline-date">06/2025 – 08/2025</span></div>
+            <div class="timeline-company">Leedersync</div>
+            <p>Automação da extração de cheques e extratos bancários com Selenium WebDriver e Spring Boot.</p>
+            <div class="chips"><span class="chip">Selenium</span><span class="chip">Spring Boot</span></div>
+          </div>
+          <div class="timeline-item fade-in">
+            <div class="timeline-top"><h3>Desenvolvedor Full Stack Júnior</h3><span class="timeline-date">04/2024 – 06/2025</span></div>
+            <div class="timeline-company">Code Square</div>
+            <p>ERP de gestão automotiva com módulo de garagem e módulo de mensagens no WhatsApp com IA em NestJS (IA Zap).</p>
+            <div class="chips"><span class="chip">Spring Boot</span><span class="chip">Angular</span><span class="chip">NestJS</span><span class="chip">PostgreSQL</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title fade-in">Tecnologias</h2>
+
+        <div class="stack-grid">
+          <div class="stack-group fade-in">
+            <h3>Back-end</h3>
+            <div class="chips"><span class="chip">Java</span><span class="chip">Spring Boot</span><span class="chip">Node.js</span><span class="chip">NestJS</span><span class="chip">REST</span><span class="chip">Docker</span></div>
+          </div>
+          <div class="stack-group fade-in">
+            <h3>Front-end</h3>
+            <div class="chips"><span class="chip">TypeScript</span><span class="chip">React</span><span class="chip">Next.js</span><span class="chip">TanStack</span><span class="chip">Angular</span></div>
+          </div>
+          <div class="stack-group fade-in">
+            <h3>IA</h3>
+            <div class="chips"><span class="chip">LangChain</span><span class="chip">LangGraph</span><span class="chip">MCP</span><span class="chip">Tool calling</span><span class="chip">RAG</span><span class="chip">Engenharia de prompt</span><span class="chip">OpenAI</span><span class="chip">Claude</span><span class="chip">Gemini</span></div>
+          </div>
+          <div class="stack-group fade-in">
+            <h3>Dados</h3>
+            <div class="chips"><span class="chip">PostgreSQL</span><span class="chip">SQL Server</span><span class="chip">MySQL</span><span class="chip">Redis</span></div>
+          </div>
+          <div class="stack-group fade-in">
+            <h3>Arquitetura</h3>
+            <div class="chips"><span class="chip">Multitenant</span><span class="chip">Microsserviços</span><span class="chip">Clean Architecture</span><span class="chip">Hexagonal</span></div>
+          </div>
+          <div class="stack-group fade-in">
+            <h3>Ferramentas</h3>
+            <div class="chips"><span class="chip">Git</span><span class="chip">CI/CD</span><span class="chip">Jira</span><span class="chip">Claude Code</span><span class="chip">Cursor</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container contact-strip fade-in">
+        <div>
+          <h2 class="section-title">Contato</h2>
+          <p>O jeito mais rápido de falar comigo é por e-mail ou LinkedIn.</p>
+        </div>
+        <div class="hero-actions">
+          <a href="mailto:carlosmiguel.dsa12@gmail.com" class="btn btn-primary">carlosmiguel.dsa12@gmail.com</a>
+          <a href="https://www.linkedin.com/in/carlos-miguel-dos-santos-alves/" target="_blank" rel="noopener" class="btn btn-ghost">LinkedIn</a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <span>© <span data-ano>2026</span> Carlos Miguel dos Santos Alves</span>
+        <a href="https://github.com/KarMiguel/Portif-lio" target="_blank" rel="noopener">Código deste site no GitHub</a>
+      </div>
+    </footer>
+
+    <a href="#" class="back-to-top" aria-label="Voltar ao topo" onclick="window.scrollTo({ top: 0, behavior: 'smooth' }); return false;">↑</a>
   </body>
 </html>

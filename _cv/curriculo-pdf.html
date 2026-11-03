@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<!--
+  Modelo do currículo em PDF, no formato compatível com ATS (sistemas de triagem de currículos):
+  uma coluna, texto simples, títulos de seção padrão e sem ícones, tabelas ou imagens.
+
+  Para gerar o PDF:
+  chrome --headless=new --no-pdf-header-footer --print-to-pdf=curriculo_carlos_miguel_dos_santos_alves_2026.pdf _cv/curriculo-pdf.html
+-->
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Carlos Miguel dos Santos Alves - Desenvolvedor Full Stack</title>
+<style>
+  @page { size: A4; margin: 10mm 14mm 9mm; }
+  body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 9.3pt;
+    line-height: 1.28;
+    color: #000;
+  }
+  h1 { font-size: 18pt; margin: 0 0 2px; }
+  .title { font-size: 11pt; font-weight: bold; margin: 0 0 4px; }
+  .contact { margin: 0; }
+  h2 {
+    font-size: 10.5pt;
+    text-transform: uppercase;
+    border-bottom: 1px solid #000;
+    padding-bottom: 1px;
+    margin: 8px 0 4px;
+  }
+  p { margin: 0 0 2px; }
+  h3 { font-size: 9.6pt; margin: 5px 0 1px; }
+  ul { margin: 0 0 2px; padding-left: 16px; }
+  li { margin-bottom: 1.5px; }
+  .skills p { margin-bottom: 2px; }
+  a { color: #000; text-decoration: none; }
+</style>
+</head>
+<body>
+
+<h1>Carlos Miguel dos Santos Alves</h1>
+<p class="title">Desenvolvedor Full Stack</p>
+<p class="contact">Minas Gerais, Brasil | (38) 99966-1117 | carlosmiguel.dsa12@gmail.com</p>
+<p class="contact">linkedin.com/in/carlos-miguel-dos-santos-alves | github.com/KarMiguel | karmiguel.github.io/Portifolio</p>
+
+<h2>Resumo profissional</h2>
+<p>
+  Desenvolvedor Full Stack Pleno com mais de 2 anos de experiência no desenvolvimento de sistemas web com Java (Spring Boot),
+  Node.js (NestJS), TypeScript, React, Next.js e Angular. Experiência em arquitetura de software, sistemas multitenant, APIs REST
+  e integração de sistemas. Atua com integração de Inteligência Artificial em sistemas usando LLMs, LangChain, LangGraph, MCP,
+  RAG e engenharia de prompt. Bacharel em Sistemas de Informação.
+</p>
+
+<h2>Competências técnicas</h2>
+<div class="skills">
+  <p><b>Linguagens:</b> Java, TypeScript, JavaScript, SQL</p>
+  <p><b>Back-end:</b> Spring Boot, Spring Security, Spring Data JPA, Node.js, NestJS, APIs REST, WebSocket, Swagger/OpenAPI</p>
+  <p><b>Front-end:</b> React, Next.js, Angular, TanStack, RxJS, HTML, CSS</p>
+  <p><b>Inteligência Artificial:</b> LLMs, LangChain, LangGraph, MCP (Model Context Protocol), RAG, Tool Calling, Agentes de IA, Engenharia de Prompt, OpenAI API, Anthropic API, Gemini API</p>
+  <p><b>Banco de dados:</b> PostgreSQL, SQL Server, MySQL, Redis</p>
+  <p><b>DevOps e ferramentas:</b> Docker, Git, GitHub, CI/CD, Kafka, BullMQ, Jira</p>
+  <p><b>Arquitetura e práticas:</b> Arquitetura de Software, Microsserviços, Clean Architecture, Arquitetura Hexagonal, Multitenant, Integração de Sistemas, TDD, JUnit, Jest, Selenium, Scrum, Kanban</p>
+</div>
+
+<h2>Experiência profissional</h2>
+
+<h3>Desenvolvedor Full Stack Pleno | Code Square | fev/2026 – atual</h3>
+<ul>
+  <li>Integrei CRM com gestão de leads e atendimento automatizado via WhatsApp para o cliente Carros Auto Mall, usando LangChain para apoio de IA e análise de relatórios.</li>
+  <li>Desenvolvo o módulo de CRM da plataforma Homeet: cadastro de clientes e leads, funil de vendas e tarefas em Kanban.</li>
+</ul>
+
+<h3>Desenvolvedor Full Stack | RTech Solutions | ago/2025 – fev/2026</h3>
+<ul>
+  <li>Desenvolvi sistema regulatório multitenant para concessões rodoviárias com Spring Boot, Next.js e SQL Server, com integração à API do Outlook que converte e-mails em solicitações, chat, tramitação de documentos e autenticação LDAP.</li>
+  <li>Desenvolvi motor de emissão de Nota Fiscal integrado à API do ADN/SERPRO, com autenticação por certificado digital A1 (Spring Boot, PostgreSQL).</li>
+  <li>Integrei APIs governamentais para consulta de licitações e contratos públicos, com relatórios e estatísticas (Next.js, React).</li>
+</ul>
+
+<h3>Desenvolvedor de Automação | Leedersync | jun/2025 – ago/2025</h3>
+<ul>
+  <li>Automatizei a extração de cheques e extratos bancários com Selenium WebDriver e Spring Boot.</li>
+</ul>
+
+<h3>Desenvolvedor Full Stack Júnior | Code Square | abr/2024 – jun/2025</h3>
+<ul>
+  <li>Desenvolvi ERP de gestão automotiva e módulo de garagem com Spring Boot, Angular e PostgreSQL.</li>
+  <li>Desenvolvi módulo de automação de mensagens no WhatsApp com IA em NestJS (IA Zap).</li>
+</ul>
+
+<h2>Formação acadêmica</h2>
+<p><b>Bacharelado em Sistemas de Informação</b> | Instituto Federal do Norte de Minas Gerais (IFNMG), Campus Arinos | 2022 – jun/2026 (concluído)</p>
+
+<h2>Projetos</h2>
+<ul>
+  <li><b>CLAVIS</b> (projeto pessoal): sistema de inventário patrimonial para paróquias, com importação de NF-e, QR Code e controle de acesso por perfil.</li>
+  <li><b>CM LabAI</b> (projeto pessoal): aplicação de IA generativa para criação de textos, transcrição de áudio e geração de conteúdo com LLMs.</li>
+  <li><b>Terra Manager</b> (pesquisa IFNMG, 2024–2025): API de gestão e planejamento agrícola com simulação de cultivos.</li>
+  <li><b>Encurtador de links com rastreamento</b> (IFNMG): API com métricas de acesso por IP, localização e período.</li>
+</ul>
+
+<h2>Publicações</h2>
+<p>Transformando TVs BOXs em Minicomputadores para Educação Digital: uma abordagem sustentável e acessível. WICS 2024, SBC.</p>
+
+<h2>Cursos</h2>
+<p>API REST e Spring Boot (Udemy) | Potência Tech Angular Developer (DIO) | Java Orientado a Objetos (Curso em Vídeo)</p>
+
+<h2>Idiomas</h2>
+<p>Português: nativo | Inglês: básico</p>
+
+</body>
+</html>
